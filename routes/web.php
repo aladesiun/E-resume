@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('cv-heading');
 });
+Route::get('/education', function () {
+    return view('education');
+});
 
 
 Route::post('/register', [\App\Http\Controllers\UsersController::class, 'register']);

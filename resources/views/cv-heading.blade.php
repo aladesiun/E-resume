@@ -22,13 +22,13 @@
                 </div>
                 <form method="" action="">
                     <div class="row form_row">
-                    <div class="col-lg-6">
-                        <div class="form-box">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-box form_b" >
                           <p>job title</p>
                           <input type="text" class="form-control" placeholder="e.g. Account representative"/>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-6">
                         <div class="form-box">
                            <p>Employer</p>
                            <input type="text" class="form-control" placeholder="e.g. Account representative"/>
@@ -36,13 +36,13 @@
                     </div>
                     </div>
                     <div class="row form_row">
-                    <div class="col-lg-6">
-                        <div class="form-box">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-box form_b">
                            <p>city/town</p>
                            <input type="text" class="form-control" placeholder="e.g. Account representative"/>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-6">
                         <div class="form-box">
                            <p>country</p>
                            <input type="text" class="form-control" placeholder="e.g. Account representative"/>
@@ -50,13 +50,13 @@
                     </div>
                     </div>
                     <div class="row form_row">
-                    <div class="col-lg-6">
-                       <div class="form-box">
+                    <div class="col-lg-6 col-md-6">
+                       <div class="form-box form_b">
                            <p>start date</p>
                            <input type="text" class="form-control" placeholder="e.g. Account representative"/>
                        </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-6">
                        <div class="form-box">
                            <p>end date</p>
                            <input type="text" class="form-control" placeholder="e.g. Account representative"/>  
@@ -64,6 +64,15 @@
                     </div>
                     </div>
                 </form>
+
+                <div class="btn_box">
+                  <button class="btn back_btn">
+                      Back
+                  </button>
+                  <button  class="btn nxt_btn">
+                     Next
+                  </button>
+                </div>
             </div>
         </div>
     </div>

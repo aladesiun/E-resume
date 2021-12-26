@@ -14,8 +14,9 @@ body{
     /* background-color: #F6F5F0; */
     background-color: #AA1945;
     width: 100%;
-    height: 70px;
+    height: 90px;
     position: fixed;
+    padding: 14px 0px;
 }
 .navbar_wrap{
     display: flex;
@@ -23,6 +24,16 @@ body{
     height: 70px;
     /* width: 100%; */
     padding: 0px 115px;
+    position: relative;
+}
+
+.menu_bar{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    color: #fff;
+    font-size: 30px;
+    display: none;
 }
 .navbar_logo{
     width: 132px;
@@ -36,6 +47,7 @@ body{
     align-items: center;
     justify-content: center;
     padding-left: 15px;
+    transition: .5s ease-in-out;
 }
 .navbar_links ul{
     list-style-type: none;
@@ -44,30 +56,31 @@ body{
     justify-content: center;
     margin-bottom: 0px;
     padding-left: 0px;
+    
 }
 .navbar_links ul li{
     margin-right: 52px;
 }
 .navbar_links ul li .nav-link{
     padding: 0rem 0rem!important;
-}
-.navbar_links ul li a{
-    color: #fff;
-    /* font-family: sans-serif; */
+    color: #fff!important;
     font-size: 17px;
-    padding-bottom: 2px!important; 
     transition: slideup .5s ;
 }
+
 .navbar_links ul li a:hover{
     color: #fff;
     border-bottom: 1px solid #fff; 
+}
+.toggle{
+    display: block!important;
 }
 
 
 
 .hd_container{
     width: 100%;
-    height: 690px;
+    height:auto;
     background: #fff;
     border-top-right-radius: 180px;
    
@@ -80,7 +93,7 @@ body{
     padding-top: 32px;
 }
 .hd_cont{
-   padding-top: 70px;
+   padding-top: 90px;
 }
 .tp_box{
     /* border: 1px solid red; */
@@ -128,7 +141,70 @@ body{
 .form_row{
     margin-bottom: 2rem;
 }
+.btn_box{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 93px;
+}
+.back_btn{
+    border: 2px solid #AA1945!important;
+    color: #AA1945!important;
+    border-radius: 26px!important;
+    padding: 10px 58px!important;
+    font-weight: 900!important;
+}
+.nxt_btn{
+    background:  #AA1945!important;
+    color: #fff!important;
+    border-radius: 26px!important;
+    padding: 10px 58px!important;
+    font-weight: 900!important;
+}
 
+
+
+/*-----------footer-------------*/
+.footer_wrapper{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 25px 0px;
+}
+.footer_wrapper .footer_cont{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+}
+.reserved_txt{
+    font-size: 14px;
+    margin-right: 66px;
+    margin-bottom: 0px;
+    padding-top: 12px;
+
+
+}
+.footer_details{
+    width: auto;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.terms{
+    border: none;
+    border-right: 2px solid #AA1945;
+}
+.terms .terms_p,.terms_link{
+    text-decoration: none!important;
+    color: #AA1945!important;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 0px;
+    padding : 0px 6px;
+}
 
 /*----navbar------*/
 @media only screen  and (max-width:1282px) {
@@ -153,23 +229,38 @@ body{
     }
     .navbar_links{
         background: #AA1945;
-        height: 300px;
+        height:100vh;
         padding: 10px 0px;
-        width: 50%;
-        margin-top: 4px;
-        margin-left: 0px;
-        /* display: none; */
+        width: 291px;
+        margin-top: 1px;
+        margin-left: -51px;
+        display: none;
     }
     .navbar_links ul{
-        line-height: 3;
+        line-height: 6;
         padding-left: 30px;
         border-left:2px solid #fff ;
         margin-left: 13px;
+        
     }
     .nav_lg{
         height: 100%;
     }
+    .menu_bar{
+        display: block!important;
+        cursor: pointer;
+    }
+    .navbar_links ul li .nav-link{
+         padding-bottom: 0rem;
+    }
 }
+@media only screen  and (max-width:1000px) {
+    .navbar_links ul li a{
+        font-size: 15px;
+    }
+}
+
+
 
 
 @media only screen and (max-width:1153px){
@@ -185,6 +276,25 @@ body{
       width: 90%;
     }
     .hd_top_box{
+        display: block;
+    }
+}
+
+
+
+/*--------foooter----*/
+@media only screen  and (max-width:767px) {
+   .form_b{
+    margin-bottom: 17px;
+   }
+}
+@media only screen  and (max-width:379px) {
+    .back_btn,.nxt_btn{
+        padding: 4px 30px!important;
+    }
+}
+@media only screen  and (max-width:800px) {
+    .footer_wrapper .footer_cont{
         display: block;
     }
 }
