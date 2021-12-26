@@ -21,6 +21,7 @@
                    <p class="job_p">Lorem ipsum dolor sit amet.</p>
                 </div>
                 <form method="" action="">
+
                     <div class="row form_row">
                         <div class="col-lg-6 col-md-6">
                             <div class="form-box form_b" >

@@ -21,7 +21,7 @@
                    <p class="job_p">Let see what you got!</p>
                 </div>
                 <form method="" action="">
-                    <div class="row form_row">
+                    <div class="row form_row txt_area_row">
                         <div class="col-lg-12">
                            <div class="form-box">
                                <textarea class="form-control txt_area">
@@ -32,7 +32,7 @@
                     </div>
                 </form>
 
-                <div class="btn_box">
+                <div class="btn_box txt_area_box">
                   <button class="btn back_btn">
                       Back
                   </button>
