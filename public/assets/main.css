@@ -83,7 +83,7 @@ body{
     height:auto;
     background: #fff;
     border-top-right-radius: 180px;
-   
+    padding-top: 44px;   
 }
 .hd_wrap{
     width: 70%;
@@ -96,7 +96,6 @@ body{
    padding-top: 90px;
 }
 .tp_box{
-    /* border: 1px solid red; */
     height: 30px;
     width: 200px;
     display: flex;
@@ -160,6 +159,9 @@ body{
     padding: 10px 58px!important;
     font-weight: 900!important;
 }
+.last_row{
+    margin-bottom: 60px;
+}
 
 
 
@@ -206,6 +208,10 @@ body{
     padding : 0px 6px;
 }
 
+.txt_area{
+    width: 543px!important;
+    height: 266px!important;
+}
 /*----navbar------*/
 @media only screen  and (max-width:1282px) {
     .navbar_wrap{

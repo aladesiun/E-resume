@@ -33,11 +33,11 @@
                         <ul>
                            <li class="nav-item">
                                <a href="/" class="nav-link">
-                                   CV heading
+                                  Home
                                </a>
                             </li>
                             <li class="nav-item">
-                               <a href="" class="nav-link">
+                               <a href="/history" class="nav-link">
                                    Work history
                                </a>
                             </li>
@@ -47,13 +47,13 @@
                                </a>
                             </li>
                             <li class="nav-item">
-                               <a href="" class="nav-link">
+                               <a href="/skills" class="nav-link">
                                   Skills
                                </a>
-                            </li>
+                            </li> 
                             <li class="nav-item">
-                                <a href="" class="nav-link">
-                                  Professional summary
+                                <a href="/contact" class="nav-link">
+                                  Contact
                                </a>
                             </li>
                             <li class="nav-item">

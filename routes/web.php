@@ -14,10 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('cv-heading');
+    return view('home');
+});
+Route::get('/history', function () {
+    return view('work-history');
 });
 Route::get('/education', function () {
     return view('education');
+});
+Route::get('/skills', function () {
+    return view('skills');
+});
+Route::get('/contact', function () {
+    return view('contact');
 });
 
 

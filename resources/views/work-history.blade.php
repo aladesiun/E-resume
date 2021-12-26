@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     </div>
-                    <div class="row form_row">
+                    <div class="row form_row last_row">
                     <div class="col-lg-6 col-md-6">
                        <div class="form-box form_b">
                            <p>start date</p>
