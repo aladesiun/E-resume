@@ -37,3 +37,5 @@ Route::post('/create', [\App\Http\Controllers\ResumeController::class, 'create']
 Route::get('/resume', [\App\Http\Controllers\ResumeController::class, 'getresume']);
 Route::post('/create-skills', [\App\Http\Controllers\ResumeController::class, 'createskills']);
 Route::post('/create-experience', [\App\Http\Controllers\ResumeController::class, 'createExperience']);
+Route::post('/create-education', [\App\Http\Controllers\ResumeController::class, 'createEducation']);
+Route::get('/html-pdf', [HTMLPDFController::class, 'htmlpdf'])->name('htmlPdf');
