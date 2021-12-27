@@ -57,8 +57,8 @@
                                </a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link">
-                                  Finalise
+                                <a href="/login" class="nav-link">
+                                  Login
                                </a>
                             </li>
                         </ul>

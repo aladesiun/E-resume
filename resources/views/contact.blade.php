@@ -50,7 +50,7 @@
                           </div>
                        </div>
                     </div>
-                    <div class="row form_row last_row">
+                    <div class="row form_row">
                         <div class="col-lg-4 col-md-4">
                         <div class="form-box form_b">
                             <p>Phone</p>
@@ -89,7 +89,6 @@
                         </button>
                     </div>
                 </form>
-
 
             </div>
         </div>

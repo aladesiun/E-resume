@@ -66,7 +66,6 @@
                             </div>
                         </div>
                     </div>
-
                 <div class="btn_box">
                   <button class="btn back_btn" >
                       Back
