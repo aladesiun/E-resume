@@ -2,7 +2,7 @@
 @section('content')
 <div>
     <div class="hd_cont">
-        <div class="hd_container"> 
+        <div class="hd_container">
             <div class="hd_wrap">
                 <div class="hd_top_box">
                     <h2 class="hd_txt">Tell us about your work experience</h2>
@@ -20,18 +20,19 @@
                 <div class="">
                    <p class="job_p">Start with your most recent job and work backwards.</p>
                 </div>
-                <form method="" action="">
+                <form method="post" action="/create-experience">
+                    @csrf
                     <div class="row form_row">
                     <div class="col-lg-6 col-md-6">
                         <div class="form-box form_b" >
                           <p>job title</p>
-                          <input type="text" class="form-control" placeholder="e.g. Account representative"/>
+                          <input name="role_name" type="text" class="form-control" placeholder="e.g. Account representative"/>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="form-box">
                            <p>Employer</p>
-                           <input type="text" class="form-control" placeholder="e.g. Account representative"/>
+                           <input name="company_name" type="text" class="form-control" placeholder="e.g. Account representative"/>
                         </div>
                     </div>
                     </div>
@@ -39,13 +40,13 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="form-box form_b">
                            <p>city/town</p>
-                           <input type="text" class="form-control" placeholder="e.g. Account representative"/>
+                           <input name="city" type="text" class="form-control" placeholder="e.g. Account representative"/>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="form-box">
                            <p>country</p>
-                           <input type="text" class="form-control" placeholder="e.g. Account representative"/>
+                           <input name="country" type="text" class="form-control" placeholder="e.g. Account representative"/>
                         </div>
                     </div>
                     </div>
@@ -53,28 +54,29 @@
                     <div class="col-lg-6 col-md-6">
                        <div class="form-box form_b">
                            <p>start date</p>
-                           <input type="text" class="form-control" placeholder="e.g. Account representative"/>
+                           <input name="start_date" type="date" class="form-control" placeholder="e.g. Account representative"/>
                        </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                        <div class="form-box">
                            <p>end date</p>
-                           <input type="text" class="form-control" placeholder="e.g. Account representative"/>  
+                           <input name="end_date" type="date" class="form-control" placeholder="e.g. Account representative"/>
                       </div>
                     </div>
                     </div>
-                </form>
 
                 <div class="btn_box">
                   <button class="btn back_btn">
                       Back
                   </button>
-                  <button  class="btn nxt_btn">
+                  <button  class="btn nxt_btn" type="submit">
                      Next
                   </button>
                 </div>
+                </form>
+
             </div>
         </div>
     </div>
 </div>
-@endsection 
+@endsection

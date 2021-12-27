@@ -21,6 +21,7 @@
                    <p class="job_p">Use our expert recommendations below to get started.</p>
                 </div>
                 <form method="/create-education" action="post">
+                    @csrf
                     <div class="row form_row">
                         <div class="col-lg-6 col-md-6">
                             <div class="form-box form_b" >
@@ -65,16 +66,16 @@
                             </div>
                         </div>
                     </div>
-                </form>
 
                 <div class="btn_box">
-                  <button class="btn back_btn">
+                  <button class="btn back_btn" >
                       Back
                   </button>
-                  <button  class="btn nxt_btn">
+                  <button  class="btn nxt_btn" type="submit">
                      Send
                   </button>
                 </div>
+                </form>
             </div>
         </div>
     </div>
