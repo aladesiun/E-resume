@@ -5,11 +5,13 @@
        <div class="name_wrap home_name_wrap">
            <div class="circle_deatails">
                <div class="user_circle">
-                  <i class="fas fa-user-tie"></i>
+                    <i class="fal fa-file-alt file_i"></i>
+                    <i class="fal fa-file-alt file_ii"></i>
                </div>
              <div  class="home_details">
-               <p class="home_details_txt">This app will help you generate your resume to get a job.</p>
-               <button class="btn btn_home">GET STARTED</button>
+                 <h4 class="home_h4">Build your perfect CV</h4>
+                  <p class="home_details_txt">This app will help you generate your resume to get a job.</p>
+                  <button class="btn btn_home">GET STARTED</button>
              </div>
            </div>
            <!-- <p class="nam_sec_txt"><span>poy stacy</span></p>

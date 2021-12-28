@@ -2,7 +2,7 @@
 @section('content')
 <div>
     <div class="hd_cont">
-        <div class="hd_container"> 
+        <div class="hd_container contact_wrap"> 
             <div class="hd_wrap">
                 <div class="hd_top_box">
                     <h2 class="hd_txt">Contact</h2>
