@@ -182,6 +182,7 @@ body{
     width: 100%;
     height:auto;
     background: #fff;
+    min-height: 100vh;
     border-top-right-radius: 180px;
     padding-top:18px;
 }
