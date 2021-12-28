@@ -7,11 +7,14 @@ use App\Models\resume;
 use App\Models\skill;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use PDF;
 
 
 class ResumeController extends Controller
 {
     //
+
+
     public function create(Request $request){
         $this->validate($request,[
             'email'=>'required',
@@ -44,7 +47,6 @@ class ResumeController extends Controller
 
     }
 
-
     public function createskills(Request $request ){
         $this->validate($request,[
             'name'=>'required',
@@ -63,12 +65,12 @@ class ResumeController extends Controller
     }
 
     public function createEducation(Request $request){
-     $this->validate($request,[
-         'institution'=> 'required',
-         'qualification'=> 'required',
-         'field'=> 'required',
-         'grad_date'=> 'required',
-     ]);
+        $this->validate($request,[
+            'institution'=> 'required',
+            'qualification'=> 'required',
+            'field'=> 'required',
+            'grad_date'=> 'required',
+        ]);
         $user =Auth::user()->id;
 
         $education = new Education();
@@ -77,12 +79,15 @@ class ResumeController extends Controller
         $education->field= $request->field;
         $education->grad_date= $request->grad_date;
         $education->user_id= $user;
-        if($request->save()){
+        if($education->save()){
             HelperController::flashSession(true, 'Skills are uploaded successfully');
             return redirect('/');
         }
-    }
+        HelperController::flashSession(true, 'error occured');
+        return redirect('/');
 
+
+    }
 
     public function createExperience(Request $request){
         $this->validate($request,[
@@ -118,6 +123,7 @@ class ResumeController extends Controller
         $resume = resume::where('id', $user)->get();
         $skill = skill::where('user_id',$user)->get();
         $experience = Experience::where('user_id',$user)->get();
+        $education = Education::where('user_id',$user)->get();
         $new_skill= array();
         foreach ($skill as $sk){
             $name_skills = explode(",",$sk->name);
@@ -128,6 +134,18 @@ class ResumeController extends Controller
             $roles = explode(",",$esp->role);
             array_push($new_role, $roles);
         }
-        return view('resumetemp.sample1', ['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience]);
+        return view('resumetemp.sample1', ['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);
+    }
+    public function gethome(){
+        if (Auth::user()){
+            $user =Auth::user()->id;
+            $resume = resume::where('id', $user)->get();
+            $skill = skill::where('user_id',$user)->get();
+            $experience = Experience::where('user_id',$user)->get();
+            $education = Education::where('user_id',$user)->get();
+            return view('home', ['resumes'=>$resume, 'skills'=>$skill,  'experiences'=>$experience, 'educations'=>$education]);
+        }
+        return view('home');
+
     }
 }

@@ -2,7 +2,7 @@
 @section('content')
 <div>
 <div class="hd_cont">
-        <div class="hd_container"> 
+        <div class="hd_container">
             <div class="hd_wrap">
                 <div class="hd_top_box">
                     <h2 class="hd_txt">Just my education</h2>
@@ -20,18 +20,18 @@
                 <div class="">
                    <p class="job_p">Use our expert recommendations below to get started.</p>
                 </div>
-                <form method="" action="">
+                <form method="/create-education" action="post">
                     <div class="row form_row">
                         <div class="col-lg-6 col-md-6">
                             <div class="form-box form_b" >
                             <p>institution name</p>
-                            <input type="text" class="form-control" placeholder="Institution name"/>
+                            <input name="institution" type="text" class="form-control" placeholder="Institution name"/>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="form-box">
                             <p>qualification</p>
-                            <input type="text" class="form-control" placeholder="e.g. Account representative"/>
+                            <input name="qualification" type="text" class="form-control" placeholder="e.g. Account representative"/>
                             </div>
                         </div>
                     </div>
@@ -40,19 +40,19 @@
                         <div class="col-lg-4 col-md-4">
                             <div class="form-box form_b">
                             <p>city/town</p>
-                            <input type="text" class="form-control" placeholder="company's country"/>
+                            <input name="city" type="text" class="form-control" placeholder="company's country"/>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="form-box">
                             <p>country</p>
-                            <input type="text" class="form-control" placeholder="company's country"/>
+                            <input name="country" type="text" class="form-control" placeholder="company's country"/>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="form-box form_b">
                                 <p>field</p>
-                                <input type="text" class="form-control" placeholder="field of study"/>
+                                <input name="field" type="text" class="form-control" placeholder="field of study"/>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                         <div class="col-lg-12 col-md-12">
                             <div class="form-box">
                                 <p>graduation date</p>
-                                <input type="text" class="form-control" placeholder="dd/mm/yy "/>  
+                                <input name="grad_date" type="date" class="form-control" placeholder="dd/mm/yy "/>
                             </div>
                         </div>
                     </div>
