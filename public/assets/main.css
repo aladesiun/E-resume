@@ -37,7 +37,7 @@ body{
 }
 .navbar_logo{
     height: 75px;
-    width: 100%;
+    width: auto;
 }
 .navbar_links{
     border-left: 1px solid #fff;
