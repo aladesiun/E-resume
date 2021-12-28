@@ -21,10 +21,11 @@
                    <p class="job_p">Let see what you got!</p>
                 </div>
                 <form method="post" action="/create-skills">
+                    @csrf
                     <div class="row form_row txt_area_row">
                         <div class="col-lg-12">
                            <div class="form-box">
-                               <textarea name="name" class="form-control txt_area" id="textarea">
+                               <textarea  name="name" class="form-control txt_area" id="textarea" placeholder="saparate the skills with a comma ','">
 
                                </textarea>
                            </div>

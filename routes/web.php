@@ -29,15 +29,18 @@ Route::middleware('auth:web')->group(function () {
         return view('contact');
     });
 
+    Route::get('/resume', [\App\Http\Controllers\ResumeController::class, 'getresumetemp']);
+
 
 
     Route::get('/logout', [\App\Http\Controllers\UsersController::class, 'logout'])->name('logout');
-    Route::post('/create', [\App\Http\Controllers\ResumeController::class, 'create']);
+    Route::post('/create-resume', [\App\Http\Controllers\ResumeController::class, 'create']);
     Route::get('/resume', [\App\Http\Controllers\ResumeController::class, 'getresume']);
     Route::post('/create-skills', [\App\Http\Controllers\ResumeController::class, 'createskills']);
     Route::post('/create-experience', [\App\Http\Controllers\ResumeController::class, 'createExperience']);
     Route::post('/create-education', [\App\Http\Controllers\ResumeController::class, 'createEducation']);
     Route::get('/html-pdf', [HTMLPDFController::class, 'htmlpdf'])->name('htmlPdf');
+
 });
     Route::get('/', function () {
         return view('home');

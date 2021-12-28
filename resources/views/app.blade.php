@@ -37,23 +37,24 @@
                                </a>
                             </li>
                             <li class="nav-item">
-                               <a href="/history" class="nav-link">
-                                   Work history
-                               </a>
+                                <a href="/contact" class="nav-link">
+                                    Contact
+                                </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="/skills" class="nav-link">
+                                    Skills
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/work-history" class="nav-link">
+                                    work history
+                                </a>
+                            </li>
+
                             <li class="nav-item">
                                <a href="/education" class="nav-link">
                                   Education
-                               </a>
-                            </li>
-                            <li class="nav-item">
-                               <a href="/skills" class="nav-link">
-                                  Skills
-                               </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/contact" class="nav-link">
-                                  Contact
                                </a>
                             </li>
                             @if(Auth::user())
@@ -92,7 +93,14 @@
           </div>
         </footer>
     </body>
+    <script src="https://cdn.tiny.cloud/1/z04rnfohe8q4u1alj8mdf1o25k5xzjdyfk37qd9bwbt2g0oz/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
+    <script>tinymce.init({
+            selector:'#textarea',
+            menubar:false,
+            toolbar:false
+
+        });</script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

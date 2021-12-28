@@ -13,6 +13,9 @@ use PDF;
 class ResumeController extends Controller
 {
     //
+    public function getresumetemp(){
+        return view('resumetemp.sample1');
+    }
 
 
     public function create(Request $request){
@@ -40,10 +43,10 @@ class ResumeController extends Controller
         $resume->skill_id= $request->skill_id;
         if ($resume->save()){
             HelperController::flashSession(true, 'Resume created Successfully');
-            return redirect('/');
+            return redirect('/skills');
         }
         HelperController::flashSession(true, 'An Error Occured');
-        return redirect('/');
+        return redirect('/create');
 
     }
 
@@ -84,7 +87,7 @@ class ResumeController extends Controller
             return redirect('/');
         }
         HelperController::flashSession(true, 'error occured');
-        return redirect('/');
+        return redirect('/education');
 
 
     }
@@ -134,8 +137,10 @@ class ResumeController extends Controller
             $roles = explode(",",$esp->role);
             array_push($new_role, $roles);
         }
-        return view('resumetemp.sample1', ['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);
+        return view('resumetemp.sample1', ['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role,
+            'experiences'=>$experience, 'educations'=>$education]);
     }
+
     public function gethome(){
         if (Auth::user()){
             $user =Auth::user()->id;

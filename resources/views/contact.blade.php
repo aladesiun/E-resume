@@ -21,8 +21,8 @@
                 <div class="">
                    <p class="job_p">Lorem ipsum dolor sit amet.</p>
                 </div>
-                <form method="post" action="/creaate">
-
+                <form method="post" action="/create-resume">
+                    @csrf
                     <div class="row form_row">
                         <div class="col-lg-6 col-md-6">
                             <div class="form-box form_b" >
@@ -75,7 +75,7 @@
                         <div class="col-lg-12 col-md-12">
                            <div class="form-box">
                                 <p>summary</p>
-                                <textarea class="form-control" placeholder="Professional summary" name="summary">
+                                <textarea id="textarea" class="form-control" placeholder="Professional summary" name="summary">
 
                                 </textarea>
                            </div>

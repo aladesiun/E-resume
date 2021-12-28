@@ -20,7 +20,7 @@
                 <div class="">
                    <p class="job_p">Use our expert recommendations below to get started.</p>
                 </div>
-                <form method="/create-education" action="post">
+                <form method="post" action="/create-education">
                     @csrf
                     <div class="row form_row">
                         <div class="col-lg-6 col-md-6">
