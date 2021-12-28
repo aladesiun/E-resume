@@ -27,7 +27,7 @@
             <nav class="nav_bar">
                 <div class="navbar_wrap">
                     <div class="nav_lg">
-                      <img src="{{asset('assets/img/cv.svg')}}" alt="IMG" class="navbar_logo">
+                      <img src="{{asset('assets/img/pp-removebg-preview.png')}}" alt="IMG" class="navbar_logo">
                     </div>
                     <div class="navbar_links">
                         <ul>

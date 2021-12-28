@@ -42,8 +42,8 @@ body{
     display: none;
 }
 .navbar_logo{
-    width: 132px;
-    height: 100%;
+    height: 75px;
+    width: 100%;
 }
 .navbar_links{
     border-left: 1px solid #fff;
@@ -89,7 +89,7 @@ body{
     /* background-image:url("/assets/img/th (1).jpg") ; */
     /* background-size: contain;
     background-repeat: no-repeat; */
-    height: 90vh;
+    height: 95vh;
     width: 100%;
     /* background-position-y: 90px; */
     padding-top: 116px;
@@ -148,10 +148,11 @@ body{
 
 
 
-    background-color:#aa194578;
+    background-color:#fff;
     color: #fff;
     width: 100%;
     height: 80vh;
+    border-bottom-left-radius: 154px;
     /* border-radius: 10px; */
     /* margin-top: 50px; */
     display: block;
@@ -191,6 +192,9 @@ body{
     margin: auto;
     padding-top: 32px;
 }
+.contact_wrap{
+    min-height: 100vh;
+}
 .hd_cont{
    padding-top: 90px;
 }
@@ -223,29 +227,55 @@ body{
     margin-bottom: 45px;
 }
 .user_circle{
-    width: 200px;
-    height: 200px;
+    width: 285px;
+    height: 302px;
     border-radius: 50%;
-    border: 3px solid #AA1945;
+    /* border: 3px solid #AA1945; */
     margin: auto;
     margin-right: 40px;
+    position: relative;
 }
-.user_circle .fa-user-tie{
-    font-size: 129px;
-    padding: 27px;
+.file_i,.file_ii{
+    font-size:219px;
     color: #aa1945;
+    position: absolute;
+    left: 79px;
 }
+.file_ii{
+    position: absolute;
+    left: 43px;
+    top: 72px;
+    font-size:219px;
+    color: #aa19457a;
+    animation: updown;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+}
+@keyframes updown{
+    from{
+       top: 222px;
+    }
+    to{
+       top: 71px;
+    }
+}
+
+
 .home_name_wrap{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .home_details{
-    border-left: 3px solid #AA1945;
-    border-right: 3px solid #AA1945;
-    width: 365px;
-    height: 73px;
-
+   color: #AA1945;
+    width: auto;
+    font-family: sans-serif;
+    text-align: left;
+    padding: 60px 0px;
+}
+.home_h4{
+    font-size: 58px;
+    margin-bottom: 9px;
 }
 .home_details .home_details_txt{
     font-size: 22px;
@@ -253,6 +283,8 @@ body{
 .btn_home{
     background: #AA1945!important;
     color: #fff!important;
+    padding: 10px 55px!important;
+    border-radius: 200px!important;
 }
 .circle_deatails{
     display: flex;
@@ -332,9 +364,10 @@ body{
 .footer_wrapper{
     width: 100%;
     height: 33px;
-    background: #fff;
+    background: #AA1945;
     border-bottom: 2px solid #AA1945;
     padding-bottom: 36px;
+    color: #fff;
 }
 .footer_wrapper .footer_cont{
     width: 100%;
@@ -429,6 +462,33 @@ body{
     .navbar_links ul li .nav-link{
          padding-bottom: 0rem;
     }
+    .file_i, .file_ii{
+        font-size: 150px;
+    }
+
+    .file_ii{
+        top: 117px;
+    }
+    .file_i{
+        top: 86px;
+    }
+    @keyframes updown{
+        from{
+           top: 222px;
+        }
+        to{
+           top: 117px;
+        }
+    }
+    .home_h4{
+        font-size: 47px;
+    }
+    .home_details .home_details_txt{
+        font-size: 15px;
+    }
+    .btn_home{
+        padding: 7px 28px!important;
+    }
 }
 @media only screen  and (max-width:1000px) {
     .navbar_links ul li a{
@@ -455,7 +515,15 @@ body{
         margin:auto;
     }
 }
-
+@media only screen  and (max-width:801px) {
+    .circle_deatails{
+        display: block!important;
+        text-align: center;
+    }
+    .home_details{
+        padding-top: 0px!important;
+    }
+}
 
 @media only screen and (max-width:1153px){
     .hd_top_box h2{
@@ -503,5 +571,9 @@ body{
 @media only screen  and (max-width:528px) {
     .login_form{
         width: 100%;
+    }
+
+    .user_circle{
+        display: none;
     }
 }
