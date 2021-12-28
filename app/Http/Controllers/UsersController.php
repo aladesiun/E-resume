@@ -14,8 +14,16 @@ class UsersController extends Controller
             'firstname'=>'required|max:100',
             'lastname'=>'required|max:100',
             'email'=>'required|unique:resumes',
-            'password'=>'required|min:5'
+            'password'=>'required|min:5',
+            'confirm_password'=>'required|min:5'
         ]);
+
+        if ($request->confirm_password !== $request->password){
+            HelperController::flashSession(false, 'password doesn\'t match' );
+
+            return redirect('/signup');
+        }
+
         $user = new User();
         $user->firstname = $request->firstname;
         $user->lastname = $request->lastname;
@@ -51,7 +59,7 @@ class UsersController extends Controller
         }
         HelperController::flashSession(true, 'authentication failed');
 
-        return redirect('/');
+        return redirect('/login');
     }
 
 

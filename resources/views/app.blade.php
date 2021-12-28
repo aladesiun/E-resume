@@ -50,17 +50,31 @@
                                <a href="/skills" class="nav-link">
                                   Skills
                                </a>
-                            </li> 
+                            </li>
                             <li class="nav-item">
                                 <a href="/contact" class="nav-link">
                                   Contact
                                </a>
                             </li>
+                            @if(Auth::user())
+                                <li class="nav-item">
+                                    <a href="/logout" class="nav-link">
+                                        Logout
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a  class="nav-link user-lk">
+                                        <i class="fal fa-user"></i>{{Auth::user()->lastname}}
+                                    </a>
+                                </li>
+                            @else
                             <li class="nav-item">
                                 <a href="/login" class="nav-link">
                                   Login
                                </a>
                             </li>
+                                @endif
                         </ul>
                     </div>
                     <i class="fad fa-bars menu_bar"></i>
@@ -68,6 +82,8 @@
             </nav>
         </header>
         @yield('content')
+        @include('notification')
+
         <footer>
           <div class="footer_wrapper">
               <div class="footer_cont">
@@ -76,8 +92,9 @@
           </div>
         </footer>
     </body>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <script src="{{asset('assets/main.js')}}"></script>
     </html>

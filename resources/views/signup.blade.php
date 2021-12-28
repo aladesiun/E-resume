@@ -2,7 +2,7 @@
 @section('content')
 <div>
 <div class="hd_cont">
-        <div class="hd_container"> 
+        <div class="hd_container">
             <div class="hd_wrap sign_up">
                 <div class="hd_top_box">
                     <h2 class="hd_txt">Signup</h2>
@@ -10,43 +10,44 @@
                 <div class="">
                    <p class="job_p">Start with your most recent job and work backwards.</p>
                 </div>
-                <form method="" action="" class="login_form">
+                <form method="post" action="/register" class="login_form">
+                    @csrf
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="form-box form_b">
                                 <p>firstname</p>
-                                <input type="email" class="form-control" placeholder="Email"/>
+                                <input name="firstname" type="text" class="form-control" placeholder="firstname"/>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="form-box form_b">
                                 <p>lastname</p>
-                                <input type="password" class="form-control" placeholder="*****"/>
+                                <input name="lastname" type="text" class="form-control" placeholder="lastname"/>
                             </div>
-                        </div>           
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="form-box form_b">
                                 <p>Email</p>
-                                <input type="email" class="form-control" placeholder="Email"/>
+                                <input name="email" type="email" class="form-control" placeholder="Email"/>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="form-box form_b">
                                 <p>Password</p>
-                                <input type="password" class="form-control" placeholder="*****"/>
+                                <input name="password" type="password" class="form-control" placeholder="*****"/>
                             </div>
-                        </div>           
+                        </div>
                     </div>
                     <div class="row">
                       <div class="form-box">
                           <p>Confirm password</p>
-                         <input type="password" class="form-control" placeholder="Confirm Password"/>
+                         <input name="confirm_password" type="password" class="form-control" placeholder="Confirm Password"/>
                       </div>
                     </div>
-                    <div  type="submit" class="btn_box">
-                        <button  class="btn nxt_btn">
+                    <div   class="btn_box">
+                        <button type="submit" class="btn nxt_btn">
                            Submit
                         </button>
                         <div class="arrow_back">

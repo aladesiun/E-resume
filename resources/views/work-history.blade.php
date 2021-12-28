@@ -56,7 +56,7 @@
                            <p>start date</p>
                            <input name="start_date" type="date" class="form-control" placeholder="e.g. Account representative"/>
                        </div>
-                      
+
                     <div class="col-lg-6 col-md-6">
                        <div class="form-box">
                            <p>end date</p>

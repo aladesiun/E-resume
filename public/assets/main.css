@@ -10,6 +10,12 @@ body{
    background: #AA1945!important;
    font-family: 'Nunito', sans-serif!important;
 }
+.user-lk{
+    text-transform: capitalize;
+}
+.user-lk i{
+    padding-right: 2px;
+}
 .nav_bar{
     /* background-color: #F6F5F0; */
     background-color: #AA1945;
@@ -56,7 +62,7 @@ body{
     justify-content: center;
     margin-bottom: 0px;
     padding-left: 0px;
-    
+
 }
 .navbar_links ul li{
     margin-right: 52px;
@@ -70,7 +76,7 @@ body{
 
 .navbar_links ul li a:hover{
     color: #fff;
-    border-bottom: 1px solid #fff; 
+    border-bottom: 1px solid #fff;
 }
 .toggle{
     left: -62px!important;
@@ -95,7 +101,7 @@ body{
     font-size: 130px;
     text-transform: uppercase;
     margin-bottom: 0px;
-    text-shadow: -17px 19px 10px #000; 
+    text-shadow: -17px 19px 10px #000;
 }
 .nam_sec_txt{
     font-weight: 700;
@@ -176,11 +182,11 @@ body{
     height:auto;
     background: #fff;
     border-top-right-radius: 180px;
-    padding-top:18px;   
+    padding-top:18px;
 }
 .hd_wrap{
     width: 70%;
-  
+
     height: auto;
     margin: auto;
     padding-top: 32px;
@@ -411,7 +417,7 @@ body{
         padding-left: 30px;
         border-left:2px solid #fff ;
         margin-left: 13px;
-        
+
     }
     .nav_lg{
         height: 100%;
@@ -444,7 +450,7 @@ body{
 @media only screen  and (max-width:654px) {
     .circle_deatails{
         display: block!important;
-    } 
+    }
     .user_circle{
         margin:auto;
     }
