@@ -28,7 +28,12 @@ Route::get('/skills', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/signup', function () {
+    return view('signup');
+});
 
 Route::post('/register', [\App\Http\Controllers\UsersController::class, 'register']);
 Route::post('/login', [\App\Http\Controllers\UsersController::class, 'login']);

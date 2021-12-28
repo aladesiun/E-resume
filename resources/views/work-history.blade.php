@@ -50,29 +50,28 @@
                     </div>
                     </div>
                     <div class="row form_row last_row">
-                    <div class="col-lg-6 col-md-6">
-                       <div class="form-box form_b">
-                           <p>start date</p>
-                           <input type="text" class="form-control" placeholder="e.g. Account representative"/>
+                       <div class="col-lg-6 col-md-6">
+                            <div class="form-box form_b">
+                                <p>start date</p>
+                                <input type="text" class="form-control" placeholder="e.g. Account representative"/>
+                            </div>
                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-box">
+                                <p>end date</p>
+                                <input type="text" class="form-control" placeholder="e.g. Account representative"/>  
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                       <div class="form-box">
-                           <p>end date</p>
-                           <input type="text" class="form-control" placeholder="e.g. Account representative"/>  
-                      </div>
-                    </div>
-                    </div>
+                    <div class="btn_box">
+                        <button class="btn back_btn">
+                            Back
+                        </button>
+                        <button  class="btn nxt_btn">
+                            Next
+                        </button>
+                  </div>
                 </form>
-
-                <div class="btn_box">
-                  <button class="btn back_btn">
-                      Back
-                  </button>
-                  <button  class="btn nxt_btn">
-                     Next
-                  </button>
-                </div>
             </div>
         </div>
     </div>

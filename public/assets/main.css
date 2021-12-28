@@ -83,7 +83,7 @@ body{
     /* background-image:url("/assets/img/th (1).jpg") ; */
     /* background-size: contain;
     background-repeat: no-repeat; */
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     /* background-position-y: 90px; */
     padding-top: 116px;
@@ -112,6 +112,7 @@ body{
     color: #AA1945;
     text-transform: uppercase;
     font-size:30px;
+    margin-bottom: 0px;
 }
 .title_btn{
     background: #AA1945!important;
@@ -128,17 +129,47 @@ body{
 
 
 .name_wrap{
-    height:75vh;
+    /* height:75vh;
     margin: auto;
     width: 100%;
-    /* background: rgba(0,0,0,0.5); */
+    background: rgba(0,0,0,0.5);
     text-align: center;
     padding-top: 64px;
     background-image: url("/assets/img/newbg.png");
     background-repeat: no-repeat;
-    background-size: cover;
-}
+    background-size: cover; */
 
+
+
+
+    background-color:#aa194578;
+    color: #fff;
+    width: 100%;
+    height: 80vh;
+    /* border-radius: 10px; */
+    /* margin-top: 50px; */
+    display: block;
+    text-align: center;
+    /* line-height: 40px; */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+/* .name_wrap::after{
+    content: '';
+    position: absolute;
+    background-color: #f8f9fa;
+    width: 588px;
+    height: 608px;
+    border-radius: 50%;
+    top: 0;
+    left: 6px;
+    transform: translate(-49%,0);
+    z-index: -1;
+} */
+.login_wrapper{
+    padding-top: 90px;
+}
 
 .hd_container{
     width: 100%;
@@ -185,9 +216,41 @@ body{
 .job_p{
     margin-bottom: 45px;
 }
+.user_circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #AA1945;
+    margin: auto;
+    margin-right: 40px;
+}
+.user_circle .fa-user-tie{
+    font-size: 129px;
+    padding: 27px;
+    color: #aa1945;
+}
+.home_name_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home_details{
+    border-left: 3px solid #AA1945;
+    border-right: 3px solid #AA1945;
+    width: 365px;
+    height: 73px;
 
-
-
+}
+.home_details .home_details_txt{
+    font-size: 22px;
+}
+.btn_home{
+    background: #AA1945!important;
+    color: #fff!important;
+}
+.circle_deatails{
+    display: flex;
+}
 
 /*----form----*/
 .form-box p{
@@ -199,9 +262,9 @@ body{
 .form-box input{
     padding: 14px;
 }
-.form_row{
+/* .form_row{
     margin-bottom: 2rem;
-}
+} */
 .btn_box{
     display: flex;
     justify-content: space-between;
@@ -233,13 +296,36 @@ body{
 .txt_area_box{
     padding-bottom: 71px;
 }
-
+.login_form{
+    width: 456px;
+}
+.form-box:not(.no_box){
+    margin-bottom: 34px;
+}
+.d_account{
+    text-align: right;
+}
+.d_account p a{
+    text-decoration: none;
+    color: #AA1945;
+}
+.login_wrap{
+    padding-bottom: 127px;
+}
+.sign_up{
+    padding-bottom: 57px;
+}
+.arrow_back .arrow_bck,.arrow_back{
+    color: #AA1945!important;
+    font-weight: 800;
+    text-decoration: none!important;
+}
 
 
 /*-----------footer-------------*/
 .footer_wrapper{
     width: 100%;
-    height: auto;
+    height: 33px;
     background: #fff;
     border-bottom: 2px solid #AA1945;
     padding-bottom: 36px;
@@ -284,6 +370,7 @@ body{
     width: 543px!important;
     height: 266px!important;
 }
+
 
 /*----navbar------*/
 @media only screen  and (max-width:1282px) {
@@ -341,9 +428,27 @@ body{
     .navbar_links ul li a{
         font-size: 15px;
     }
+    .home_wrap .nam_sec_txt{
+        font-size: 86px;
+    }
+    .title_box .title_txt{
+        margin-bottom:0px ;
+    }
 }
-
-
+@media only screen  and (max-width:388px) {
+    .navbar_links{
+        width:100%;
+        left: -400px;
+    }
+}
+@media only screen  and (max-width:654px) {
+    .circle_deatails{
+        display: block!important;
+    } 
+    .user_circle{
+        margin:auto;
+    }
+}
 
 
 @media only screen and (max-width:1153px){
@@ -387,5 +492,10 @@ body{
 @media only screen  and (max-width:970px) {
     .txt_area_box{
         padding-bottom: 78px;
+    }
+}
+@media only screen  and (max-width:528px) {
+    .login_form{
+        width: 100%;
     }
 }
