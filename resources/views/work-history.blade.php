@@ -68,7 +68,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-box">
                                     <p>Role summary</p>
-                                    <textarea id="textarea" class="form-control" placeholder="Professional summary" name="summary">
+                                    <textarea id="textarea" class="form-control" placeholder="Pleases select a listing system you prefer at the menu bar" name="summary">
 
                                 </textarea>
                                 </div>
