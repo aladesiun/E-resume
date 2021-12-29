@@ -13,8 +13,8 @@
                             <p><a href="/resume" class="eb_link">Preview</a></p>
                         </div>
                         <div class="icon_wrap">
-                            <i class="far fa-lightbulb"></i>
-                            <p><a href="" class="eb_link">Tips</a><s/p>
+                            <i class="fas fa-download"></i>
+                            <p><a href="" class="eb_link">Download</a><s/p>
                         </div>
                     </div>
                 </div>

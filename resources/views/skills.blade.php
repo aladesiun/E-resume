@@ -30,7 +30,7 @@
                                </textarea>
                            </div>
                         </div>
-                    </div>
+                    </div>  
 
                 <div class="btn_box txt_area_box">
                   <button class="btn back_btn">
