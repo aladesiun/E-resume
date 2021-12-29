@@ -613,7 +613,7 @@
                                                                 <li><span>{{$fullskill}}</span></li>
                                                             @endforeach
                                                         @endforeach
-                                                       
+
                                                     </ul>
                                                 </span>
 

@@ -25,9 +25,7 @@ Route::middleware('auth:web')->group(function () {
     Route::get('/skills', function () {
         return view('skills');
     });
-    Route::get('/contact', function () {
-        return view('contact');
-    });
+    Route::get('/contact', [\App\Http\Controllers\ComponentController::class, "getcontact"]);
 
     Route::get('/resume', [\App\Http\Controllers\ResumeController::class, 'getresumetemp']);
 
