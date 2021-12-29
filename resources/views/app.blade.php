@@ -100,6 +100,7 @@
             menubar:false,
             toolbar:false,
             plugins: "lists",
+            forced_root_block : 'ul',
             toolbar: "numlist bullist"
 
         });</script>

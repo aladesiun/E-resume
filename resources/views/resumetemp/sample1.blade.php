@@ -613,10 +613,7 @@
                                                                 <li><span>{{$fullskill}}</span></li>
                                                             @endforeach
                                                         @endforeach
-                                                        <li><span>HTML/ CSS</span></li>
-                                                            <li><span>Git</span></li>
-                                                            <li><span>Vue.js</span></li>
-                                                            <li><span>php</span></li>
+                                                       
                                                     </ul>
                                                 </span>
 

@@ -113,10 +113,11 @@ class ResumeController extends Controller
         $experience->user_id = $user;
         if ($experience->save()){
             HelperController::flashSession(true, 'work experience are uploaded successfully');
-            return redirect('/');
+            return redirect('/education');
 
 
         }
+
     }
 
     public function getresume(){
