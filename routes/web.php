@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:web')->group(function () {
 
 
-    Route::get('/history', function () {
+    Route::get('/work-history', function () {
         return view('work-history');
     });
     Route::get('/education', function () {

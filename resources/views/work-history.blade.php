@@ -9,7 +9,7 @@
                     <div class="tp_box">
                         <div class="icon_wrap">
                             <i class="far fa-eye"></i>
-                            <p><a href="" class="eb_link">Preview</a></p>
+                            <p><a href="/resume" class="eb_link">Preview</a></p>
                         </div>
                         <div class="icon_wrap">
                             <i class="far fa-lightbulb"></i>
@@ -50,21 +50,30 @@
                         </div>
                     </div>
                     </div>
-                    <div class="row form_row last_row">
+                    <div class="row form_row">
                     <div class="col-lg-6 col-md-6">
                        <div class="form-box form_b">
                            <p>start date</p>
-                           <input name="start_date" type="date" class="form-control" placeholder="e.g. Account representative"/>
+                           <input name="from" type="date" class="form-control" placeholder="e.g. Account representative"/>
                        </div>
-
+                    </div>
                     <div class="col-lg-6 col-md-6">
                        <div class="form-box">
                            <p>end date</p>
-                           <input name="end_date" type="date" class="form-control" placeholder="e.g. Account representative"/>
+                           <input name="to" type="date" class="form-control" placeholder="e.g. Account representative"/>
                       </div>
                     </div>
                     </div>
+                        <div class="row form_row last_row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-box">
+                                    <p>Role summary</p>
+                                    <textarea id="textarea" class="form-control" placeholder="Professional summary" name="summary">
 
+                                </textarea>
+                                </div>
+                            </div>
+                        </div>
                 <div class="btn_box">
                   <button class="btn back_btn">
                       Back

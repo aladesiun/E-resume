@@ -12,11 +12,9 @@ use PDF;
 
 class ResumeController extends Controller
 {
-    //
     public function getresumetemp(){
         return view('resumetemp.sample1');
     }
-
 
     public function create(Request $request){
         $this->validate($request,[
