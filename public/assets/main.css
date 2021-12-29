@@ -152,8 +152,6 @@ body{
     display: block;
     text-align: center;
     /* line-height: 40px; */
-    position: relative;
-    z-index: 1;
     overflow: hidden;
 }
 /* .name_wrap::after{
@@ -372,7 +370,6 @@ body{
 }
 .reserved_txt{
     font-size: 14px;
-    margin-right: 66px;
     margin-bottom: 0px;
     padding-top: 12px;
 
@@ -466,6 +463,9 @@ body{
     .file_i{
         top: 86px;
     }
+    .navbar_logo{
+        width: auto;
+    }
     @keyframes updown{
         from{
            top: 222px;
@@ -533,6 +533,20 @@ body{
     }
     .hd_top_box{
         display: block;
+    }
+}
+@media only screen  and (max-width:490px) {
+    .home_details{
+        text-align: center;
+    }
+    .home_h4{
+        font-size: 39px;
+    }
+}
+@media only screen  and (max-width:400px) {
+    .home_details{
+        width: 88%;
+        margin: auto;
     }
 }
 
