@@ -12,15 +12,15 @@
                             <p><a href="/resume" class="eb_link">Preview</a></p>
                         </div>
                         <div class="icon_wrap">
-                            <i class="far fa-lightbulb"></i>
-                            <p><a href="" class="eb_link">Tips</a><s/p>
+                            <i class="fas fa-download"></i>
+                            <p><a href="" class="eb_link">Download</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="">
                    <p class="job_p">Let see what you got!</p>
                 </div>
-                <form method="post" action="/create-skills">
+                <form method="post" action="/create-skills" class="main_form">
                     @csrf
                     <div class="row form_row txt_area_row">
                         <div class="col-lg-12">
@@ -30,7 +30,7 @@
                                </textarea>
                            </div>
                         </div>
-                    </div>
+                    </div>  
 
                 <div class="btn_box txt_area_box">
                   <button class="btn back_btn">
@@ -39,6 +39,9 @@
                   <button  class="btn nxt_btn" type="submit">
                      Next
                   </button>
+                </div>
+                <div class="success_popup">
+                   <i class="far fa-check check_ic"></i>
                 </div>
                 </form>
 

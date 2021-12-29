@@ -12,15 +12,15 @@
                             <p><a href="/resume" class="eb_link">Preview</a></p>
                         </div>
                         <div class="icon_wrap">
-                            <i class="far fa-lightbulb"></i>
-                            <p><a href="" class="eb_link">Tips</a><s/p>
+                            <i class="fas fa-download"></i>
+                            <p><a href="" class="eb_link">Download</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="">
                    <p class="job_p">Start with your most recent job and work backwards.</p>
                 </div>
-                <form method="post" action="/create-experience">
+                <form method="post" action="/create-experience" class="main_form">
                     @csrf
                     <div class="row form_row">
                     <div class="col-lg-6 col-md-6">
@@ -74,14 +74,20 @@
                                 </div>
                             </div>
                         </div>
-                <div class="btn_box">
-                  <button class="btn back_btn">
-                      Back
-                  </button>
-                  <button  class="btn nxt_btn" type="submit">
-                     Next
-                  </button>
-                </div>
+                    <div class="btn_box">
+                        <button class="btn back_btn">
+                            Back
+                        </button>
+                        <button  class="btn nxt_btn" type="submit">
+                            Next
+                        </button>
+                    </div>
+                    <div class="success_popup">
+                       <i class="far fa-check check_ic"></i>
+                    </div>
+                    <div class="success_popup">
+                       <i class="far fa-check check_ic"></i>
+                    </div>
                 </form>
             </div>
         </div>

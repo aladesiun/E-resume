@@ -13,15 +13,15 @@
                             <p><a href="/resume" class="eb_link">Preview</a></p>
                         </div>
                         <div class="icon_wrap">
-                            <i class="far fa-lightbulb"></i>
-                            <p><a href="" class="eb_link">Tips</a><s/p>
+                            <i class="fas fa-download"></i>
+                            <p><a href="" class="eb_link">Download</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="">
                    <p class="job_p">Lorem ipsum dolor sit amet.</p>
                 </div>
-                <form method="post" action="/create-resume">
+                <form method="post" action="/create-resume" class="main_form">
                     @csrf
                     <div class="row form_row">
                         <div class="col-lg-6 col-md-6">
@@ -88,6 +88,9 @@
                         <button  class="btn nxt_btn" type="submit">
                             Send
                         </button>
+                    </div>
+                    <div class="success_popup">
+                       <i class="far fa-check check_ic"></i>
                     </div>
                 </form>
 
