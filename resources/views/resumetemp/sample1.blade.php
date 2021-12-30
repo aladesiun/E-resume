@@ -1,4 +1,14 @@
-
+<style>
+    .all-resume{
+        width: 90%;
+        margin: auto;
+        padding: 30px;
+    }
+    body{
+      background: black;
+    }
+</style>
+<body>
 <div class="" tabindex="">
     <div>
         <style type="text/css" id="static">
@@ -73,11 +83,15 @@
                 background: transparent;
                 letter-spacing: -1!important;
             }
+            #document{
+                background: white;
+            }
             body {
                 line-height: 1;
                 text-align: left;
                 font-feature-settings: "liga" 0;
                 -moz-font-feature-settings: "liga" off;
+                background: white;
             }
             #document.skn-mli2 table {
                 border-collapse: collapse;
@@ -98,7 +112,7 @@
             }
             #document.skn-mli2 ul li {
                 position: relative;
-                margin: 0;
+                margin: 7px 0px;
             }
             #document.skn-mli2 ul li:before {
                 content: "\2022";
@@ -142,11 +156,11 @@
             #document.skn-mli2 .topsection {
                 position: relative;
                 padding-top: 45px;
-                border-bottom: 1px solid #FFB03A;
+                border-bottom: 1px solid #aa1945;
             }
             #document.skn-mli2 .topsection:before {
                 content: "";
-                background: #FFB03A;
+                background: #aa1945;
                 position: absolute;
                 height: 35px;
                 width: 100%;
@@ -166,7 +180,7 @@
 
             /*Name and CNTC*/
             #document.skn-mli2 .name {
-                color: #FFB03A;
+                color: #aa1945;
                 font-size: 36px;
                 line-height: 34px;
                 font-weight: 700;
@@ -217,18 +231,19 @@
             }
             #document.skn-mli2 .left-box .section,
             #document.skn-mli2 .right-box .section {
-                border-bottom: 1px solid #FFB03A;
+                border-bottom: 1px solid #aa1945;
             }
 
             /*heading*/
             #document.skn-mli2 .heading {
                 margin-bottom: 9px;
+                margin-top: 9px;
                 font-weight: bold;
                 font-size: 18px;
                 overflow: hidden;
             }
             #document.skn-mli2 .sectiontitle {
-                color: #FFB03A;
+                color: #aa1945;
                 text-transform: uppercase;
                 padding-right: 5px;
                 display: inline;
@@ -241,7 +256,7 @@
                 height: 12px;
                 margin-right: -100%;
                 margin-left: 5px;
-                background: #FFB03A;
+                background: #aa1945;
                 opacity: 0.3;
             }
             #document.skn-mli2 .jobline ul {
@@ -405,7 +420,7 @@
         </style>
     </div>
     @if(count($resumes) == 0)
-        <h1>create resume first</h1>
+        <h1>create contact first</h1>
     @else
         @foreach($resumes as $res)
             <div id="document" class="document fontsize fontface vmargins hmargins pagesize skn-mli2 MLI2 MUK" docskinwidth="525">
@@ -492,7 +507,7 @@
 
                                                                     <span class="jobline" id="FIELD_JDES">
                                                         <ul>
-                                                            <lspan><p></p>{!!$experience->role!!}</lspan></li>
+                                                            <span>{!!$experience->role!!}</span>
 
                                                         </ul>
                                                     </span>
@@ -532,7 +547,7 @@
                                                                 </div>
                                                                 <div class="paddedline" dependency="SCIT|SSTA|SCHO|SCNT">
                                                                     <span class="companyname" id="FIELD_SCHO"> {{$education->institution}}</span>
-                                                                    <span dependency="SCHO"><span dependency="SCIT|SSTA|SCNT"> - </span></span>
+                                                                    <span dependency="SCHO"><span dependency="SCIT|SSTA|SCNT">  </span></span>
                                                                     <span class="joblocation jobcity" id="FIELD_SCIT"> {{$education->city}} - {{$education->country}}</span>
                                                                     <span class="joblocation jobstate" id="FIELD_SSTA"></span>
                                                                     <span class="joblocation jobcountry" id="FIELD_SCNT"></span>
@@ -610,7 +625,7 @@
 
                                                             @foreach($skill as $fullskill)
 
-                                                                <li><span>{{$fullskill}}</span></li>
+                                                                <li>{!!$fullskill!!}</li>
                                                             @endforeach
                                                         @endforeach
 
@@ -636,5 +651,5 @@
     @endif
 
 </div>
-
+</body>
 

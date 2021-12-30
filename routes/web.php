@@ -14,22 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:web')->group(function () {
+    //get pdf
+    Route::get('getresume', [\App\Http\Controllers\HtmlPdfController::class, 'htmlPdf'])->name('htmlPdf');
 
-
-    Route::get('/work-history', function () {
-        return view('work-history');
-    });
-    Route::get('/education', function () {
-        return view('education');
-    });
-    Route::get('/skills', function () {
-        return view('skills');
-    });
     Route::get('/contact', [\App\Http\Controllers\ComponentController::class, "getcontact"]);
+    Route::get('/skills', [\App\Http\Controllers\ComponentController::class, "getskill"]);
+    Route::get('/education', [\App\Http\Controllers\ComponentController::class, "geteducation"]);
+    Route::get('/work-history', [\App\Http\Controllers\ComponentController::class, "gethistory"]);
 
     Route::get('/resume', [\App\Http\Controllers\ResumeController::class, 'getresumetemp']);
-
-
 
     Route::get('/logout', [\App\Http\Controllers\UsersController::class, 'logout'])->name('logout');
     Route::post('/create-resume', [\App\Http\Controllers\ResumeController::class, 'create']);

@@ -34,14 +34,13 @@ class UsersController extends Controller
             if (Auth::attempt($credentials)) {
                 $request->session()->regenerate();
                 $userlog =Auth::user();
-                sleep(10);
 
                 HelperController::flashSession(true, 'login Successfully');
 
                 return redirect('/');
             }
         }
-        HelperController::flashSession(true, 'authentication failed');
+        HelperController::flashSession(true, 'authentication failed, invalid details');
         return 'authentication failed';
     }
     public function login(Request $request){
@@ -57,7 +56,7 @@ class UsersController extends Controller
             return redirect('/');
 
         }
-        HelperController::flashSession(true, 'authentication failed');
+        HelperController::flashSession(true, 'authentication failed, invalid details');
 
         return redirect('/login');
     }

@@ -22,6 +22,8 @@
                 </div>
                 <form method="post" action="/create-skills" class="main_form">
                     @csrf
+                    @if(count($skill) == 0 )
+
                     <div class="row form_row txt_area_row">
                         <div class="col-lg-12">
                            <div class="form-box">
@@ -30,19 +32,42 @@
                                </textarea>
                            </div>
                         </div>
-                    </div>  
+                    </div>
+                    <div class="btn_box txt_area_box">
+                      <button class="btn back_btn">
+                          Back
+                      </button>
+                      <button  class="btn nxt_btn" type="submit">
+                         Next
+                      </button>
+                    </div>
+                    @else
+                        @foreach($skill as $skills)
+                            @if($skills->user_id == Auth::user()->id)
+                                <div class="row form_row txt_area_row">
+                                    <div class="col-lg-12">
+                                        <div class="form-box">
+                               <textarea  name="name" class="form-control txt_area" id="textarea" placeholder="saparate the skills with a comma ','">
 
-                <div class="btn_box txt_area_box">
-                  <button class="btn back_btn">
-                      Back
-                  </button>
-                  <button  class="btn nxt_btn" type="submit">
-                     Next
-                  </button>
-                </div>
-                <div class="success_popup">
-                   <i class="far fa-check check_ic"></i>
-                </div>
+                               </textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn_box txt_area_box">
+                                    <button class="btn back_btn">
+                                        Back
+                                    </button>
+                                    <button  class="btn nxt_btn" type="submit">
+                                        Next
+                                    </button>
+                                </div>
+                                <div class="success_popup alert">
+                                    <p>you can create more skills</p>
+                                </div>
+                            @endif
+                        @endforeach
+                    @endif
+
                 </form>
 
             </div>

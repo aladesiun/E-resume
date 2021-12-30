@@ -13,11 +13,23 @@ class ComponentController extends Controller
 {
     //
     public function getcontact(){
-        $user = Auth::user();
-        $resume = resume::where('user_id', $user->id);
+        $user = Auth::user()->id;
+        $resume = resume::where('user_id', $user)->get();
         return view('contact',['resume'=>$resume]);
     }
-    public function getskill(){}
-    public function gethistory(){}
-    public function geteducation(){}
+    public function getskill(){
+        $user = Auth::user()->id;
+        $skill = skill::where('user_id', $user)->get();
+        return view('skills',['skill'=>$skill]);
+    }
+    public function gethistory(){
+        $user = Auth::user()->id;
+        $experience = experience::where('user_id', $user)->get();
+        return view('work-history',['experience'=>$experience]);
+    }
+    public function geteducation(){
+        $user = Auth::user()->id;
+        $education = education::where('user_id', $user)->get();
+        return view('education',['education'=>$education]);
+    }
 }
