@@ -42,8 +42,8 @@
                       </button>
                     </div>
                     @else
-                        @foreach($skill as $skills)
-                            @if($skills->user_id == Auth::user()->id)
+                            @if(count($skill)>=1)
+                            @if($skill[0]->user_id == Auth::user()->id)
                                 <div class="row form_row txt_area_row">
                                     <div class="col-lg-12">
                                         <div class="form-box">
@@ -61,11 +61,11 @@
                                         Next
                                     </button>
                                 </div>
-                                <div class="success_popup alert">
+                                <div class="success_popup ">
                                     <p>you can create more skills</p>
                                 </div>
                             @endif
-                        @endforeach
+                        @endif
                     @endif
 
                 </form>

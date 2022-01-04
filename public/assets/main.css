@@ -386,41 +386,39 @@ body{
     background: #00800045; */
 }
 .success_popup{
-    height: 100px;
-    min-width: 340px;
     border-radius: 5px;
     background: #aa19452b;
     position: absolute;
     z-index: 222;
-    top: 0;
-    right: 50%;
-    transform: translateX(50%);
+    top: -25%;
+    left: -21%;
     text-align: center;
+    padding: 10px;
     border: 1px solid #aa1945;
     animation-name:fade;
     animation-timing-function: ease-in;
-    animation-duration: 2s;
+    animation-duration: 1s;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 @keyframes fade{
     from{
-        opacity: 0;
+        left: -50%;
     }
     to{
-        opacity: 1;
+        left: -21%;
     }
 }
 .success_popup .check_ic{
-    font-size: 90px;
+    font-size: 23px;
     color: #aa1945;
 }
 .success_popup p {
     margin-bottom: 0;
     text-transform: capitalize;
     color: #aa1945;
-    font-size: 20px;
+    font-size: 16px;
 
 
 }

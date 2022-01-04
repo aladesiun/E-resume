@@ -9,11 +9,11 @@
                     <div class="tp_box">
                         <div class="icon_wrap">
                             <i class="far fa-eye"></i>
-                            <p><a href="/resume" class="eb_link">Preview</a></p>
+                            <p><a href="/resume" target="_blank" class="eb_link">Preview</a></p>
                         </div>
                         <div class="icon_wrap">
                             <i class="fas fa-download"></i>
-                            <p><a href="" class="eb_link">Download</a></p>
+                            <p><a href="" class="eb_link" target="_blank">Download</a></p>
                         </div>
                     </div>
                 </div>
@@ -22,48 +22,49 @@
                 </div>
                 <form method="post" action="/create-experience" class="main_form">
                     @csrf
-                    <div class="row form_row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-box form_b" >
-                          <p>job title</p>
-                          <input name="role_name" type="text" class="form-control" placeholder="e.g. Account representative"/>
+                    @if(count($experience) == 0 )
+                        <div class="row form_row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-box form_b" >
+                                    <p>job title</p>
+                                    <input name="role_name" type="text" class="form-control" placeholder="e.g. Account representative"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-box">
+                                    <p>Employer</p>
+                                    <input name="company_name" type="text" class="form-control" placeholder="e.g. Account representative"/>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-box">
-                           <p>Employer</p>
-                           <input name="company_name" type="text" class="form-control" placeholder="e.g. Account representative"/>
+                        <div class="row form_row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-box form_b">
+                                    <p>city/town</p>
+                                    <input name="city" type="text" class="form-control" placeholder="e.g. Account representative"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-box">
+                                    <p>country</p>
+                                    <input name="country" type="text" class="form-control" placeholder="e.g. Account representative"/>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    </div>
-                    <div class="row form_row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-box form_b">
-                           <p>city/town</p>
-                           <input name="city" type="text" class="form-control" placeholder="e.g. Account representative"/>
+                        <div class="row form_row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-box form_b">
+                                    <p>start date</p>
+                                    <input name="from" type="date" class="form-control" placeholder="e.g. Account representative"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-box">
+                                    <p>end date</p>
+                                    <input name="to" type="date" class="form-control" placeholder="e.g. Account representative"/>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-box">
-                           <p>country</p>
-                           <input name="country" type="text" class="form-control" placeholder="e.g. Account representative"/>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="row form_row">
-                    <div class="col-lg-6 col-md-6">
-                       <div class="form-box form_b">
-                           <p>start date</p>
-                           <input name="from" type="date" class="form-control" placeholder="e.g. Account representative"/>
-                       </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                       <div class="form-box">
-                           <p>end date</p>
-                           <input name="to" type="date" class="form-control" placeholder="e.g. Account representative"/>
-                      </div>
-                    </div>
-                    </div>
                         <div class="row form_row last_row">
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-box">
@@ -74,20 +75,85 @@
                                 </div>
                             </div>
                         </div>
-                    <div class="btn_box">
-                        <button class="btn back_btn">
-                            Back
-                        </button>
-                        <button  class="btn nxt_btn" type="submit">
-                            Next
-                        </button>
-                    </div>
-                    <div class="success_popup">
-                       <i class="far fa-check check_ic"></i>
-                    </div>
-                    <div class="success_popup">
-                       <i class="far fa-check check_ic"></i>
-                    </div>
+                        <div class="btn_box">
+                            <button class="btn back_btn">
+                                Back
+                            </button>
+                            <button  class="btn nxt_btn" type="submit">
+                                Next
+                            </button>
+                        </div>
+
+                    @else
+                        @foreach($experience as $exp)
+                            <div class="success_popup alert">
+                                <p>you can create more work history you have {{count($experience)}}</p>
+                            </div>
+                        @endforeach
+                            @if($experience[0]->user_id == Auth::user()->id)
+                                <div class="row form_row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box form_b" >
+                                            <p>job title</p>
+                                            <input name="role_name" type="text" class="form-control" placeholder="e.g. Account representative"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box">
+                                            <p>Employer</p>
+                                            <input name="company_name" type="text" class="form-control" placeholder="e.g. Account representative"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form_row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box form_b">
+                                            <p>city/town</p>
+                                            <input name="city" type="text" class="form-control" placeholder="e.g. Account representative"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box">
+                                            <p>country</p>
+                                            <input name="country" type="text" class="form-control" placeholder="e.g. Account representative"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form_row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box form_b">
+                                            <p>start date</p>
+                                            <input name="from" type="date" class="form-control" placeholder="e.g. Account representative"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box">
+                                            <p>end date</p>
+                                            <input name="to" type="date" class="form-control" placeholder="e.g. Account representative"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form_row last_row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-box">
+                                            <p>Role summary</p>
+                                            <textarea id="textarea" class="form-control" placeholder="Pleases select a listing system you prefer at the menu bar" name="summary">
+
+                                </textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn_box">
+                                    <button class="btn back_btn">
+                                        Back
+                                    </button>
+                                    <button  class="btn nxt_btn" type="submit">
+                                        Next
+                                    </button>
+                                </div>
+
+                            @endif
+                    @endif
                 </form>
             </div>
         </div>

@@ -16,7 +16,7 @@ class HTMLPDFController extends Controller
     public function htmlPdf()
     {
         $user =Auth::user()->id;
-        $resume = resume::where('id', $user)->get();
+        $resume = resume::where('user_id', $user)->get();
         $skill = skill::where('user_id',$user)->get();
         $experience = Experience::where('user_id',$user)->get();
         $education = Education::where('user_id',$user)->get();
@@ -35,6 +35,7 @@ class HTMLPDFController extends Controller
         $pdf = PDF::loadView('resumetemp.sample1', ['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);
 
         // download pdf file
-        return $pdf->stream('download.pdf');
+        $username =Auth::user()->firstname;
+        return $pdf->download($username.'resume.pdf');
     }
 }

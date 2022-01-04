@@ -21,16 +21,19 @@ Route::middleware('auth:web')->group(function () {
     Route::get('/skills', [\App\Http\Controllers\ComponentController::class, "getskill"]);
     Route::get('/education', [\App\Http\Controllers\ComponentController::class, "geteducation"]);
     Route::get('/work-history', [\App\Http\Controllers\ComponentController::class, "gethistory"]);
+//    Route::get('/resumes', [\App\Http\Controllers\ResumeController::class, 'getresumetemp']);
 
-    Route::get('/resume', [\App\Http\Controllers\ResumeController::class, 'getresumetemp']);
+    Route::post('/edit-contact', [\App\Http\Controllers\ResumeController::class, 'editcontact']);
 
-    Route::get('/logout', [\App\Http\Controllers\UsersController::class, 'logout'])->name('logout');
-    Route::post('/create-resume', [\App\Http\Controllers\ResumeController::class, 'create']);
-    Route::get('/resume', [\App\Http\Controllers\ResumeController::class, 'getresume']);
+    Route::post('/create-contact', [\App\Http\Controllers\ResumeController::class, 'create']);
     Route::post('/create-skills', [\App\Http\Controllers\ResumeController::class, 'createskills']);
     Route::post('/create-experience', [\App\Http\Controllers\ResumeController::class, 'createExperience']);
     Route::post('/create-education', [\App\Http\Controllers\ResumeController::class, 'createEducation']);
     Route::get('/html-pdf', [HTMLPDFController::class, 'htmlpdf'])->name('htmlPdf');
+
+    Route::get('/logout', [\App\Http\Controllers\UsersController::class, 'logout'])->name('logout');
+    Route::get('/resume', [\App\Http\Controllers\ResumeController::class, 'getresume']);
+
 
 });
     Route::get('/', function () {

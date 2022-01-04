@@ -53,6 +53,7 @@ class UsersController extends Controller
             $request->session()->regenerate();
 
             HelperController::flashSession(true, 'login  Successfully');
+
             return redirect('/');
 
         }

@@ -44,7 +44,39 @@ class ResumeController extends Controller
             return redirect('/skills');
         }
         HelperController::flashSession(true, 'An Error Occured');
-        return redirect('/create');
+        return redirect('/contact');
+
+    }
+
+    public function editcontact(Request $request){
+        $this->validate($request,[
+            'email'=>'required',
+            'name'=>'required',
+            'address'=>'required',
+            'country'=>'required',
+            'city'=>'required',
+            'phone'=>'required',
+            'postal'=>'required',
+            'summary'=>'required',
+        ]);
+        $user = Auth::user()->id;
+        $resume =  resume::where('user_id', $user)->first();
+        $resume->email = $request->email;
+        $resume->name = $request->name;
+        $resume->address = $request->address;
+        $resume->country = $request->country;
+        $resume->city = $request->city;
+        $resume->phone = $request->postal;
+        $resume->summary= $request->summary;
+        $resume->experience_id= $request->experience_id;
+        $resume->user_id= Auth::user()->id;
+        $resume->skill_id= $request->skill_id;
+        if ($resume->save()){
+            HelperController::flashSession(true, 'contact edited  Successfully');
+            return redirect('/skills');
+        }
+        HelperController::flashSession(true, 'An Error Occured');
+        return redirect('/contact');
 
     }
 
@@ -85,7 +117,6 @@ class ResumeController extends Controller
             return redirect('/');
         }
         HelperController::flashSession(true, 'error occured');
-        return redirect('/education');
 
 
     }
@@ -122,7 +153,8 @@ class ResumeController extends Controller
 
     public function getresume(){
         $user =Auth::user()->id;
-        $resume = resume::where('id', $user)->get();
+
+        $resume = resume::where('user_id', $user)->get();
         $skill = skill::where('user_id',$user)->get();
         $experience = Experience::where('user_id',$user)->get();
         $education = Education::where('user_id',$user)->get();
@@ -136,14 +168,20 @@ class ResumeController extends Controller
             $roles = explode(",",$esp->role);
             array_push($new_role, $roles);
         }
-        return view('resumetemp.sample1', ['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role,
-            'experiences'=>$experience, 'educations'=>$education]);
+
+        // selecting PDF view
+        $pdf = PDF::loadView('resumetemp.sample1', ['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);
+
+        // download pdf file
+        $username =Auth::user()->firstname;
+        return $pdf->stream($username.'resume.pdf');
+
     }
 
     public function gethome(){
         if (Auth::user()){
             $user =Auth::user()->id;
-            $resume = resume::where('id', $user)->get();
+            $resume = resume::where('user_id', $user)->get();
             $skill = skill::where('user_id',$user)->get();
             $experience = Experience::where('user_id',$user)->get();
             $education = Education::where('user_id',$user)->get();

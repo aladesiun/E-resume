@@ -413,15 +413,13 @@
             /*For Extra Space Before Colon*/
             #document.skn-mli2 .beforecolonspace {
                 display: none !important;
-            }
+            }1
             #document.skn-mli2.MFR .beforecolonspace {
                 display: inline !important;
             }
         </style>
     </div>
-    @if(count($resumes) == 0)
-        <h1>create contact first</h1>
-    @else
+
         @foreach($resumes as $res)
             <div id="document" class="document fontsize fontface vmargins hmargins pagesize skn-mli2 MLI2 MUK" docskinwidth="525">
                 <div id="CONTAINER_PARENT_0" class="topsection">
@@ -647,8 +645,6 @@
                 <div id="CONTAINER_PARENT_2" class="bottom-box"><div id="CONTAINER_3"></div></div>
             </div>
         @endforeach
-
-    @endif
 
 </div>
 </body>
