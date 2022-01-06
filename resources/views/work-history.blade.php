@@ -51,6 +51,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row form_row">
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-box form_b">
@@ -85,11 +86,9 @@
                         </div>
 
                     @else
-                        @foreach($experience as $exp)
-                            <div class="success_popup alert">
+                            <div class="success_popup">
                                 <p>you can create more work history you have {{count($experience)}}</p>
                             </div>
-                        @endforeach
                             @if($experience[0]->user_id == Auth::user()->id)
                                 <div class="row form_row">
                                     <div class="col-lg-6 col-md-6">

@@ -2,14 +2,7 @@ $(document).ready(function(){
  $(".menu_bar").click(function(){
    $(".navbar_links").toggleClass("toggle")
  });
-    $('body').click(function (){
-        $('.alert').hide();
-    })
 
-    $('body').mousemove(function (){
-        $('.alert').hide();
-    })
-    $('body').scroll(function (){
-        $('.alert').hide();
-    })
+    $(".success_popup").show().delay(5000).fadeOut();
+    $(".alert").delay(2500).fadeOut();
 });

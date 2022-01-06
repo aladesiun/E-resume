@@ -11,17 +11,18 @@
                         <div class="tp_box">
                             <div class="icon_wrap">
                                 <i class="far fa-eye"></i>
-                                <p><a href="" class="eb_link">Preview</a></p>
+                                <p><a href="/resume" class="eb_link">Preview</a></p>
                             </div>
                             <div class="icon_wrap">
                                 <i class="far fa-lightbulb"></i>
-                                <p><a href="" class="eb_link">Tips</a><s/p>
+                                <p><a href="/getresume" class="eb_link">Download</a></p>
                             </div>
                         </div>
                     </div>
                     <div class="">
                         <p class="job_p">Use our expert recommendations below to get started.</p>
                     </div>
+
                     <form method="" action="">
                         <div class="row form_row">
                             <div class="col-lg-6 col-md-6">
@@ -33,7 +34,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-box">
                                     <p>qualification</p>
-                                    <input type="text" class="form-control" placeholder="e.g. Account representative"/>
+                                    <input type="text" class="form-control" placeholder="e.g. master.."/>
                                 </div>
                             </div>
                         </div>
@@ -42,13 +43,13 @@
                             <div class="col-lg-4 col-md-4">
                                 <div class="form-box form_b">
                                     <p>city/town</p>
-                                    <input type="text" class="form-control" placeholder="company's country"/>
+                                    <input type="text" class="form-control" placeholder=" city"/>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="form-box">
                                     <p>country</p>
-                                    <input type="text" class="form-control" placeholder="company's country"/>
+                                    <input type="text" class="form-control" placeholder="country"/>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4">
