@@ -113,7 +113,7 @@ class ResumeController extends Controller
         $education->grad_date= $request->grad_date;
         $education->user_id= $user;
         if($education->save()){
-            HelperController::flashSession(true, 'Skills are uploaded successfully');
+            HelperController::flashSession(true, 'Education are uploaded successfully');
             return redirect('/');
         }
         HelperController::flashSession(true, 'error occured');

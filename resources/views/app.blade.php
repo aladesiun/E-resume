@@ -91,7 +91,7 @@
         <footer>
           <div class="footer_wrapper">
               <div class="footer_cont">
-                <p class="reserved_txt">© 2021, Bold Limited. All rights reserved.</p>
+                <p class="reserved_txt">© 2021,  Amarachi(love & light). All rights reserved.</p>
               </div>
           </div>
         </footer>
