@@ -22,7 +22,6 @@
                     <div class="">
                         <p class="job_p">Use our expert recommendations below to get started.</p>
                     </div>
-                    <?php  dd($education); ?>
                     <form method="post" action="create-education">
                         @csrf
                         @if(count($education) == 0 )
@@ -82,7 +81,7 @@
                     </div>
                         @else
                             <div class="success_popup">
-                                <p>you can create more education you have <b>{{count($education)}}</b></p>
+                                <p>you can create more education you have {{count($education)}}</p>
                             </div>
                             @if($education[0]->user_id == Auth::user()->id)
                             <div class="row form_row">
