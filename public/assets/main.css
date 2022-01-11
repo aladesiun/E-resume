@@ -637,6 +637,16 @@ body{
 
 /*--------foooter----*/
 @media only screen  and (max-width:767px) {
+    .success_popup {
+        height: auto;
+        width: auto;
+        top: -204px;
+        left: -11px;
+        white-space: nowrap;
+    }
+    .success_popup .check_ic{
+        font-size: 16px;
+    }
    .form_b{
     margin-bottom: 17px;
    }
@@ -668,4 +678,8 @@ body{
     .user_circle{
         display: none;
     }
+}
+
+.tox{
+    display: none!important;
 }

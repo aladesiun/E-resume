@@ -13,7 +13,7 @@
                         </div>
                         <div class="icon_wrap">
                             <i class="fas fa-download"></i>
-                            <p><a href="" class="eb_link" target="_blank">Download</a></p>
+                            <p><a href="/getresume" class="eb_link" target="_blank">Download</a></p>
                         </div>
                     </div>
                 </div>

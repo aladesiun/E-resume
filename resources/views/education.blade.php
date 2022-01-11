@@ -11,11 +11,11 @@
                         <div class="tp_box">
                             <div class="icon_wrap">
                                 <i class="far fa-eye"></i>
-                                <p><a href="/resume" class="eb_link">Preview</a></p>
+                                <p><a href="/resume" class="eb_link" target="_blank">Preview</a></p>
                             </div>
                             <div class="icon_wrap">
                                 <i class="far fa-lightbulb"></i>
-                                <p><a href="/getresume" class="eb_link">Download</a></p>
+                                <p><a href="/getresume" class="eb_link" target="_blank">Download</a></p>
                             </div>
                         </div>
                     </div>
