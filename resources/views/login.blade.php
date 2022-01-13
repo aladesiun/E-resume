@@ -31,7 +31,7 @@
                     </div>
                     <div   class="btn_box">
                         <button  type="submit" class="btn nxt_btn">
-                           Submit
+                          Login
                         </button>
                   </div>
                 </form>
