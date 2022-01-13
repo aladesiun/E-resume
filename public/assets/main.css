@@ -363,6 +363,9 @@ body{
 .login_form{
     width: 456px;
 }
+.signup_form{
+   max-width: 680px;
+}
 .form-box:not(.no_box){
     margin-bottom: 34px;
 }
