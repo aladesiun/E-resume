@@ -81,7 +81,11 @@
                 outline: 0;
                 vertical-align: baseline;
                 background: transparent;
-                letter-spacing: -1!important;
+                font-weight: normal!important;
+                text-transform: capitalize;
+            }
+            .txt-bold{
+                font-weight: bold;
             }
             #document{
                 background: white;
