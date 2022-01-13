@@ -317,15 +317,27 @@ body{
     justify-content: space-between;
     padding-bottom: 36px;
 }
+.next_btn{
+    border: 2px solid #AA1945!important;
+    color: #AA1945!important;
+    border-radius: 26px!important;
+    padding: 10px 25px!important;
+    font-weight: 900!important;
+}
 .back_btn{
     border: 2px solid #AA1945!important;
     color: #AA1945!important;
     border-radius: 26px!important;
-    padding: 10px 58px!important;
+    padding: 10px 25px!important;
     font-weight: 900!important;
+    margin-right: 14px!important;
 }
-.back_btn:focus,.nxt_btn:focus{
+
+.next_btn:focus,.nxt_btn:focus{
    box-shadow: none!important;
+}
+.back_btn:focus{
+    box-shadow: none!important;
 }
 .nxt_btn{
     background:  #AA1945!important;
@@ -623,6 +635,12 @@ body{
     .home_h4{
         font-size: 39px;
     }
+    .re_btn{
+        display: block;
+    }
+    .sub_btn{
+        margin-bottom: 36px;
+    }
 }
 @media only screen  and (max-width:400px) {
     .home_details{
@@ -656,6 +674,9 @@ body{
     .back_btn,.nxt_btn{
         padding: 4px 30px!important;
     }
+    .next_btn{
+        padding: 4px 30px!important;
+    }
 }
 @media only screen  and (max-width:800px) {
     .footer_wrapper .footer_cont{
@@ -681,3 +702,6 @@ body{
 }
 
 
+.tox{
+    /* display: none!important; */
+}

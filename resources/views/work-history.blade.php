@@ -76,13 +76,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="btn_box">
-                            <button class="btn back_btn">
-                                Back
+                        <div class="btn_box re_btn">
+                           <button  class="btn nxt_btn sub_btn" type="submit">
+                                Submit
                             </button>
-                            <button  class="btn nxt_btn" type="submit">
-                                Next
-                            </button>
+                            <div>
+                                <a class="btn back_btn" href="/skills">
+                                   Back
+                                </a>
+                                <a class="btn next_btn" href="/education">
+                                    Next
+                                </a>
+                            </div>
                         </div>
 
                     @else

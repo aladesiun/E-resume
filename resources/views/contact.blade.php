@@ -85,12 +85,12 @@
                             </div>
                         </div>
                         <div class="btn_box">
-                            <button class="btn back_btn">
-                                Back
-                            </button>
                             <button  class="btn nxt_btn" type="submit">
-                                Send
+                                Submit
                             </button>
+                            <a class="btn next_btn" href="/skills">
+                                Next
+                           </a>
                         </div>
                 </form>
                     @else
