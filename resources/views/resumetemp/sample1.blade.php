@@ -85,7 +85,7 @@
                 text-transform: capitalize;
             }
             .txt-bold{
-                font-weight: bold;
+                font-weight: bold!important;
             }
             #document{
                 background: white;
