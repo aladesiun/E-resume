@@ -75,9 +75,6 @@
                         <button type="submit" class="btn nxt_btn">
                            Submit
                         </button>
-                        <a class="btn back_btn" href="/work-history">
-                           Back
-                        </a>
                     </div>
                         @else
                             <div class="success_popup">

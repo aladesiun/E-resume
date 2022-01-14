@@ -48,7 +48,7 @@
                     </div>
                     <div   class="btn_box">
                         <button type="submit" class="btn nxt_btn">
-                           Submit
+                           Sign in
                         </button>
                         <div class="arrow_back">
                             <i class="fal fa-arrow-alt-left arrow_bck"></i>

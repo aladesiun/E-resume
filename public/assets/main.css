@@ -322,7 +322,7 @@ body{
     color: #AA1945!important;
     border-radius: 26px!important;
     padding: 10px 25px!important;
-    font-weight: 900!important;
+    font-weight: 700!important;
 }
 .back_btn{
     border: 2px solid #AA1945!important;
@@ -344,7 +344,7 @@ body{
     color: #fff!important;
     border-radius: 26px!important;
     padding: 10px 58px!important;
-    font-weight: 900!important;
+    font-weight: 700!important;
 }
 .last_row{
     margin-bottom: 60px;
@@ -380,6 +380,9 @@ body{
     padding-bottom: 57px;
 }
 .arrow_back .arrow_bck,.arrow_back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #AA1945!important;
     font-weight: 800;
     text-decoration: none!important;
