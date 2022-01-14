@@ -38,14 +38,13 @@
                         Submit
                       </button>
                       <div>
-                        <a class="btn back_btn" href="/contact">
-                           Back
-                       </a>
-                        <a class="btn next_btn" href="/work-history">
-                           Next
-                       </a>
+                           <a class="btn back_btn" href="/contact">
+                              Back
+                            </a>
+                            <a class="btn next_btn" href="/work-history">
+                              Next
+                            </a>
                       </div>
-                     
                     </div>
                     @else
                             @if(count($skill)>=1)
@@ -59,14 +58,19 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="btn_box txt_area_box">
-                                    <button class="btn back_btn">
-                                        Back
-                                    </button>
+                                <div class="btn_box txt_area_box re_btn">
                                     <button  class="btn nxt_btn" type="submit">
-                                        Next
+                                        Submit
                                     </button>
-                                </div>
+                                    <div>
+                                        <a class="btn back_btn" href="/contact">
+                                            Back
+                                       </a>
+                                       <a class="btn next_btn" href="/work-history">
+                                         Next
+                                        </a>
+                                   </div>
+                               </div>
                                 <div class="success_popup ">
                                     <p>you can create more skills</p>
                                 </div>

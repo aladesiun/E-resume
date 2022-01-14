@@ -163,13 +163,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="btn_box">
-                                    <button class="btn back_btn">
-                                        Back
-                                    </button>
+                                <div class="btn_box ">
                                     <button  class="btn nxt_btn" type="submit">
-                                        edit
+                                        Submit
                                     </button>
+                                    <a class="btn next_btn" href="/skills">
+                                        Next
+                                    </a>
                                 </div>
                             <div class="success_popup">
                                 <p>contact created successfully, Editting Mode</p>
