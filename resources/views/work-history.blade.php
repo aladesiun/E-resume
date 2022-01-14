@@ -148,12 +148,17 @@
                                     </div>
                                 </div>
                                 <div class="btn_box">
-                                    <button class="btn back_btn">
-                                        Back
-                                    </button>
                                     <button  class="btn nxt_btn" type="submit">
-                                        Next
+                                        Submit
                                     </button>
+                                    <div>
+                                        <a class="btn back_btn" href="/skills">
+                                            Back
+                                        </a>
+                                        <a class="btn next_btn" href="/education">
+                                          Next
+                                        </a>
+                                   </div>
                                 </div>
 
                             @endif

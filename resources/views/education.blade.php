@@ -127,11 +127,8 @@
                             </div>
 
                             <div class="btn_box">
-                                <button class="btn back_btn">
-                                    Back
-                                </button>
                                 <button type="submit" class="btn nxt_btn">
-                                    Send
+                                    Submit
                                 </button>
                             </div>
                             @endif
