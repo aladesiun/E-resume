@@ -10,7 +10,7 @@
                 <div class="">
                    <p class="job_p">Start with your most recent job and work backwards.</p>
                 </div>
-                <form method="post" action="/register" class="login_form">
+                <form method="post" action="/register" class="signup_form">
                     @csrf
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
@@ -27,24 +27,26 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-12 col-md-12">
                             <div class="form-box form_b">
                                 <p>Email</p>
                                 <input name="email" type="email" class="form-control" placeholder="Email"/>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6">
+                            <div class="form-box">
+                                <p>Confirm password</p>
+                                <input name="confirm_password" type="password" class="form-control" placeholder="Confirm Password"/>
+                            </div> 
+                      </div>
+                      <div class="col-lg-6 col-md-6">
                             <div class="form-box form_b">
                                 <p>Password</p>
                                 <input name="password" type="password" class="form-control" placeholder="*****"/>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                      <div class="form-box">
-                          <p>Confirm password</p>
-                         <input name="confirm_password" type="password" class="form-control" placeholder="Confirm Password"/>
-                      </div>
+                       </div>
                     </div>
                     <div   class="btn_box">
                         <button type="submit" class="btn nxt_btn">
