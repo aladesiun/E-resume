@@ -33,13 +33,19 @@
                            </div>
                         </div>
                     </div>
-                    <div class="btn_box txt_area_box">
-                      <button class="btn back_btn">
-                          Back
+                    <div class="btn_box txt_area_box re_btn">
+                      <button  class="btn nxt_btn sub_btn" type="submit">
+                        Submit
                       </button>
-                      <button  class="btn nxt_btn" type="submit">
-                         Next
-                      </button>
+                      <div>
+                        <a class="btn back_btn" href="/contact">
+                           Back
+                       </a>
+                        <a class="btn next_btn" href="/work-history">
+                           Next
+                       </a>
+                      </div>
+                     
                     </div>
                     @else
                             @if(count($skill)>=1)
