@@ -49,3 +49,6 @@ Route::middleware('auth:web')->group(function () {
     Route::get('/signup', function () {
         return view('signup');
     });
+Route::get('/newresume', function () {
+    return view('cv');
+});

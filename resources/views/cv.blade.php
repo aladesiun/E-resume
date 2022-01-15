@@ -1,8 +1,4 @@
-<div>
-   <!DOCTYPE html>
-   <head>
-        <title>cv...</title>
-        <style>
+        <style type="text/css" id="static">
             *,html{
                 padding: 0;
                 margin: 0;
@@ -27,7 +23,8 @@
 
                 .wrapper{
                     border: 1px solid #000;
-                    max-width: 1200px;
+                    /*max-width: 1200px;*/
+                    width: 100%;
                     height: auto;
                     margin: auto;
                 }
@@ -38,7 +35,7 @@
                 .top_cont{
                     height: 60px;
                     width:100%;
-                    background: var(--lightgray);
+                    background-color: var(--lightgray);
                     margin-bottom: 10px;
                 }
                 .user_name h1{
@@ -51,7 +48,7 @@
                 .line{
                     width: 100%;
                     height: 1.5px;
-                    background: var(--lightgray);
+                    background-color: var(--lightgray);
                     margin: auto;
                     margin-bottom:2.5rem;
                 }
@@ -59,7 +56,8 @@
                     /* border: 1px solid red; */
                 }
                 .summary{
-                    width:92%;
+                    width: 710px;
+                    margin-right: 60px;
                 }
                 .work_history{
                     width: 79%;
@@ -100,22 +98,22 @@
                 .contact_det .box2{
                     width:81%;
                     height: 15px;
-                    background: var(--lightgray);
+                    background-color: var(--lightgray);
                 }
                 .work_det .box3{
                     width:81%;
                     height: 15px;
-                    background: var(--lightgray);
+                    background-color: var(--lightgray);
                 }
                 .skills_det .box4{
                     width:86%;
                     height: 15px;
-                    background: var(--lightgray);
+                    background-color: var(--lightgray);
                 }
                 .education_det .box5{
                     width:86%;
                     height: 15px;
-                    background: var(--lightgray);
+                    background-color: var(--lightgray);
                 }
                 .skills ul li p{
                     color: #000;
@@ -130,7 +128,7 @@
                 .summary_det .box{
                     width: 66%;
                     height: 15px;
-                    background: var(--lightgray);
+                    background-color: var(--lightgray);
                 }
                 .detailed_box{
                     margin-bottom:63px;
@@ -180,14 +178,17 @@
 
                 }
         </style>
-   </head>
-   <body>
-       <div class="wrapper">
+   @if(count($resumes) == 0)
+       <h1>create resume first</h1>
+   @else
+
+       @foreach($resumes as $res)
+           <div class="wrapper">
             <div class="cv_wrap">
                 <div class="top_cont">
                 </div>
                 <div class="user_name">
-                    <h1>ALADESIUN TEMITOPE</h1>
+                    <h1>{{$res->name}}</h1>
                 </div>
                 <div class="line">
                 </div>
@@ -200,10 +201,8 @@
                                 </div>
                             </div>
                                 <p>
-                                    Gifted web developer who has successfully completed numerous,
-                                    lucrative and labour-intensive projects. Highly skilled and educated.
-                                    Looking for an opportunity to work for a well-established organisation
-                                    that appreciates dedication and hard work.
+                                    {{$res->summary}}
+
                                 </p>
                                 <div class="line"></div>
                         </div>
@@ -226,21 +225,24 @@
                                 <span class="span_b">
                                     <p>
                                         <b>Phone:</b>
-                                        08142488212
+                                        {{$res->phone}}
                                 </p>
                                 </span>
                                 <span class="email_span">
                                     <p>
                                     <b>Email:</b>
-                                    <a href="#">aladesiunpelumi@gmail.com</a>
+                                    <a href="#">{{$res->email}}</a>
                                     </p>
                                 </span>
                                 <div class="line"></div>
                         </div>
                     </div>
                 </div>
+
                         <div class="row">
                         <div class="work_wrap">
+
+                            @foreach($experiences as $exp)
                             <div class="work_history">
                                 <div class="work_det">
                                 <h6>WORK HISTORY</h6>
@@ -321,7 +323,7 @@
                                         <li>
                                             <p>Developed Apis to perform CRUD operations.</p>
                                         </li>
-                                        
+
                                     </ul>
                                 </div>
 
@@ -355,6 +357,7 @@
                                     </ul>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                         <div class="col-lg-5 col-md-5">
                             <div class="skills">
@@ -392,6 +395,5 @@
                         </div>
                 </div>
             </div>
-     </div>
-    </body>
-</div>
+       @endforeach
+   @endif
