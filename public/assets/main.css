@@ -332,6 +332,9 @@ body{
     font-weight: 900!important;
     margin-right: 14px!important;
 }
+.cont_btn{
+    height: fit-content;
+}
 
 .next_btn:focus,.nxt_btn:focus{
    box-shadow: none!important;
@@ -345,6 +348,7 @@ body{
     border-radius: 26px!important;
     padding: 10px 58px!important;
     font-weight: 700!important;
+    margin-bottom: 25px;
 }
 .last_row{
     margin-bottom: 60px;
@@ -352,9 +356,9 @@ body{
 .txt_area_row{
     margin-bottom: 50px;
 }
-.txt_area_box{
+/* .txt_area_box{
     padding-bottom: 71px;
-}
+} */
 .txt_area{
     width: 543px!important;
     height: 266px!important;
@@ -693,9 +697,9 @@ body{
     }
 }
 @media only screen  and (max-width:970px) {
-    .txt_area_box{
+    /* .txt_area_box{
         padding-bottom: 78px;
-    }
+    } */
 }
 @media only screen  and (max-width:528px) {
     .login_form{
