@@ -168,7 +168,7 @@ class ResumeController extends Controller
             $roles = explode(",",$esp->role);
             array_push($new_role, $roles);
         }
-        return view('cv')->with(['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);
+//        return view('cv')->with(['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);
 
         // selecting PDF view
         $pdf = PDF::loadView('cv', ['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);

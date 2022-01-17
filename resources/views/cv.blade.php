@@ -4,6 +4,7 @@
                 margin: 0;
                 box-sizing: border-box;
                 scroll-behavior: smooth;
+                text-transform: capitalize;
 
             }
                 body{
@@ -11,12 +12,12 @@
 
                 }
                 :root{
-                    --lightgray:#0c5972;
-                    --color:#0c5972;
+                    --lightgray:#aa1945;
+                    --color:#aa1945;
                 }
 
                 h6{
-                    color: #0c5972;
+                    color: #aa1945;
                     font-weight: 700;
                     font-size: 18px!important;
                     margin-bottom: 0px!important;
@@ -30,7 +31,7 @@
                     height: 12px;
                     margin-right: -100%;
                     margin-left: 5px;
-                    background: #0c5972;
+                    background: #aa1945;
                     opacity: 0.3;
                 }
 
@@ -50,7 +51,7 @@
                 .top_cont{
                     height: 60px;
                     width:100%;
-                    background-color: #0c5972;
+                    background-color: #aa1945;
                     opacity: 0.3;
 
                     margin-bottom: 10px;
@@ -65,7 +66,7 @@
                 .line{
                     width: 100%;
                     height: 1.5px;
-                    background-color: #0c5972;
+                    background-color: #aa1945;
                     margin: auto;
                     margin-bottom:2.5rem;
                 }
@@ -106,22 +107,22 @@
                 .contact_det .box2{display: none;
                     width:81%;
                     height: 15px;
-                    background-color: #0c5972;
+                    background-color: #aa1945;
                 }
                 .work_det .box3{display: none;
                     width:81%;
                     height: 15px;
-                    background-color: #0c5972;
+                    background-color: #aa1945;
                 }
                 .skills_det .box4{display: none;
                     width:86%;
                     height: 15px;
-                    background-color: #0c5972;
+                    background-color: #aa1945;
                 }
                 .education_det .box5{display: none;
                     width:86%;
                     height: 15px;
-                    background-color: #0c5972;
+                    background-color: #aa1945;
                 }
                 .skills ul li p{
                     color: #000;
@@ -138,7 +139,7 @@
                     display: none;
                     width: 66%;
                     height: 15px;
-                    background-color: #0c5972;
+                    background-color: #aa1945;
                 }
                 .detailed_box{
                     margin-bottom:16px;
@@ -160,8 +161,9 @@
                 }
                 .link{
                     margin-bottom: 24px;
+                    margin-left: 10px;
                     font-family: "Rage Italic";
-                    color: #a6d5ff !important;
+                    color: #aa1945 !important;
                 }
                 .sp_line{
                     margin-left: -15px;
@@ -242,6 +244,9 @@
             .contact li{
                 text-decoration: none!important;
             }
+            .light-txt{
+                font-weight: normal!important;
+            }
         </style>
    @if(count($resumes) == 0)
        <h1>create resume first</h1>
@@ -279,21 +284,26 @@
                                     <span class="span_a">
                                 <p>
                                     <b>Address:</b>
-                                    <li>Funsho AjayiStreet off
-                                    Oladimeji street, Aguda Surulere,
-                                    Surulere Lagos, Nigeria 100001</li>
+                                    <span class="light-txt">{{$res->address}}
+                                    {{$res->City}}, {{$res->country}} </span>
                                     </p>
                                 </span>
-                                    <span class="span_b">
+                                    <span class="span_b ">
+                                    <p>
+                                        <b>Poster:</b>
+                                        <span class="light-txt">{{$res->postal}}</span>
+                                    </p>
+                                </span>
+                                    <span class="span_b ">
                                     <p>
                                         <b>Phone:</b>
-                                        {{$res->phone}}
-                                </p>
+                                        <span class="light-txt">{{$res->phone}}</span>
+                                    </p>
                                 </span>
                                     <span class="email_span">
                                     <p>
                                     <b>Email:</b>
-                                    <a href="#">{{$res->email}}</a>
+                                    <a href="#" class="light-txt">{{$res->email}}</a>
                                     </p>
                                 </span>
                                     <div class="line"></div>
@@ -341,11 +351,13 @@
                                     <h6>EDUCATION</h6>
                                     <div class="box5"></div>
                                 </div>
+                            @foreach($educations as $education)
                                 <div class="laut">
-                                    <p><b>Bachelor of Science, Computer Science</b></p>
-                                    <p><b>Ladoke Akintola University of Technology</b>- Ogbomoso, Oyo State.</p>
+                                    <p><b>{{$education->qualification}}, {{$education->field}}</b></p>
+                                    <p><b>{{$education->institution}}</b>-{{$education->city}}, <b>Expected in:</b> {{$education->grad_date}}</p>
                                     <div class="line"></div>
                                 </div>
+                            @endforeach
                             </div>
                         </div>
             </div>
