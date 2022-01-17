@@ -147,7 +147,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="btn_box">
+                                <div class="btn_box re_btn">
                                     <button  class="btn nxt_btn" type="submit">
                                         Submit
                                     </button>
