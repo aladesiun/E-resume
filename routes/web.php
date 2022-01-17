@@ -33,6 +33,7 @@ Route::middleware('auth:web')->group(function () {
 
     Route::get('/logout', [\App\Http\Controllers\UsersController::class, 'logout'])->name('logout');
     Route::get('/resume', [\App\Http\Controllers\ResumeController::class, 'getresume']);
+    Route::get('/oldresume', [\App\Http\Controllers\ResumeController::class, 'getresume']);
 
 
 });

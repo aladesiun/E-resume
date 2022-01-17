@@ -18,14 +18,14 @@ class ResumeController extends Controller
 
     public function create(Request $request){
         $this->validate($request,[
-            'email'=>'required',
-            'name'=>'required',
-            'address'=>'required',
-            'country'=>'required',
-            'city'=>'required',
-            'phone'=>'required',
-            'postal'=>'required',
-            'summary'=>'required',
+            'email'=>'required| min:2 | max:100',
+            'name'=>'required| min:2 | max:100',
+            'address'=>'required| min:2 | max:100',
+            'country'=>'required| min:2 | max:100',
+            'city'=>'required| min:2 | max:100',
+            'phone'=>'required| min:2 | max:100',
+            'postal'=>'required| min:2 | max:100',
+            'summary'=>'required| min:2 | max:600 | max:2',
         ]);
 
         $resume = new resume();
@@ -50,14 +50,14 @@ class ResumeController extends Controller
 
     public function editcontact(Request $request){
         $this->validate($request,[
-            'email'=>'required',
-            'name'=>'required',
-            'address'=>'required',
-            'country'=>'required',
-            'city'=>'required',
-            'phone'=>'required',
-            'postal'=>'required',
-            'summary'=>'required',
+            'email'=>'required| min:2 | max:100',
+            'name'=>'required| min:2 | max:100',
+            'address'=>'required| min:2 | max:100',
+            'country'=>'required| min:2 | max:100',
+            'city'=>'required| min:2 | max:100',
+            'phone'=>'required| min:2 | max:100',
+            'postal'=>'required| min:2 | max:100',
+            'summary'=>'required| min:2 | max:600',
         ]);
         $user = Auth::user()->id;
         $resume =  resume::where('user_id', $user)->first();
@@ -82,7 +82,7 @@ class ResumeController extends Controller
 
     public function createskills(Request $request ){
         $this->validate($request,[
-            'name'=>'required',
+            'name'=>'required| min:2 | max:100',
 
         ]);
         $user =Auth::user()->id;
@@ -99,10 +99,10 @@ class ResumeController extends Controller
 
     public function createEducation(Request $request){
         $this->validate($request,[
-            'institution'=> 'required',
-            'qualification'=> 'required',
-            'field'=> 'required',
-            'grad_date'=> 'required',
+            'institution'=> 'required| min:2 | max:100',
+            'qualification'=> 'required| min:2 | max:100',
+            'field'=> 'required| min:2 | max:100',
+            'grad_date'=> 'required| min:2 | max:100',
         ]);
         $user =Auth::user()->id;
 
@@ -123,13 +123,13 @@ class ResumeController extends Controller
 
     public function createExperience(Request $request){
         $this->validate($request,[
-            'role_name'=>'required',
-            'company_name'=>'required',
-            'city'=>'required',
-            'country'=>'required',
-            'summary'=>'required',
-            'from'=>'required',
-            'to'=>'required',
+            'role_name'=>'required| min:2 | max:100',
+            'company_name'=>'required| min:2 | max:100',
+            'city'=>'required| min:2 | max:100',
+            'country'=>'required| min:2 | max:100',
+            'summary'=>'required| min:2 | max:100',
+            'from'=>'required| min:2 | max:100',
+            'to'=>'required| min:2 | max:100',
         ]);
         $user =Auth::user()->id;
 
@@ -168,6 +168,7 @@ class ResumeController extends Controller
             $roles = explode(",",$esp->role);
             array_push($new_role, $roles);
         }
+        return view('cv')->with(['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);
 
         // selecting PDF view
         $pdf = PDF::loadView('cv', ['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);
