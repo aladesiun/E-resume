@@ -97,7 +97,7 @@
                         </div>
 
                     @else
-                            <div class="success_popup">
+                            <div class="success_popup history_popup">
                                 <p>you can create more work history you have {{count($experience)}}</p>
                             </div>
                             @if($experience[0]->user_id == Auth::user()->id)
@@ -161,7 +161,7 @@
                                     </div>
                                 </div>
                                 <div class="btn_box re_btn">
-                                    <button  class="btn nxt_btn" type="submit">
+                                    <button  class="btn nxt_btn sub_btn" type="submit">
                                         Submit
                                     </button>
                                     <div>
