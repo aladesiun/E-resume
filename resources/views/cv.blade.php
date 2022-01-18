@@ -34,6 +34,24 @@
                     background: #aa1945;
                     opacity: 0.3;
                 }
+                .contact-title{
+                    color: #aa1945;
+                    font-weight: 700;
+                    font-size: 18px!important;
+                    margin-bottom: 0px!important;
+                    white-space: nowrap;
+                    margin-right: 5px;
+                }
+                .contact-title::after{
+                    content: "";
+                    display: inline-block;
+                    width: 150px;
+                    height: 12px;
+                    margin-right: -100%;
+                    margin-left: 5px;
+                    background: #aa1945;
+                    opacity: 0.3;
+                }
 
 
                 .wrapper{
@@ -221,13 +239,17 @@
             }
             .work-skils{
                 display: table;
+                table-layout: fixed;
+
                 width: 100%;
                 border-collapse: collapse
             }
             .work{
                 width: 65%;
                 padding: 25px 17px 25px 0;
+                height: auto;
                 display: table-cell;
+                min-height: 1000px;
             }
 
             .skills{
@@ -277,14 +299,14 @@
                             <div class=" contact-holder">
                                 <div class="contact">
                                     <div class="contact_det">
-                                        <h6>CONTACT</h6>
+                                        <h5 class="contact-title">CONTACT</h5>
                                         <div class="box2">
                                         </div>
                                     </div>
                                     <span class="span_a">
                                 <p>
                                     <b>Address:</b>
-                                    <span class="light-txt">{{$res->address}}
+                                    <span clas="light-txt">{{$res->address}}
                                     {{$res->City}}, {{$res->country}} </span>
                                     </p>
                                 </span>
@@ -320,12 +342,11 @@
                                    <div class="detailed_box">
                                        <p class="sp_txt"><b>{{$exp->role_name}}</b>, {{$exp->from}} to {{$exp->to}} </p>
                                        <p class="sp_txt"><b>{{$exp->company_name}} </b> - {{$exp->city}} , {{$exp->country}}</p>
-                                       <i class="link">https://anjjfjffff.com</i>
+                                       <i class="link">{{$exp->link}}</i>
                                        <div class="role-cont">
-                                               <p>
-                                                  {!! $exp->role !!}
-                                               </p>
-
+                                                  <p>
+                                                    {!! $exp->role !!}
+                                                  </p>
                                        </div>
                                    </div>
                                    @endforeach
