@@ -88,7 +88,7 @@
                             <button  class="btn nxt_btn" type="submit">
                                 Submit
                             </button>
-                            <a class="btn next_btn" href="/skills">
+                            <a class="btn next_btn cont_btn" href="/skills">
                                 Next
                            </a>
                         </div>

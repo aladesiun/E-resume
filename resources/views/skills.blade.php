@@ -59,7 +59,7 @@
                                     </div>
                                 </div>
                                 <div class="btn_box txt_area_box re_btn">
-                                    <button  class="btn nxt_btn" type="submit">
+                                    <button  class="btn nxt_btn sub_btn" type="submit">
                                         Submit
                                     </button>
                                     <div>
@@ -71,7 +71,7 @@
                                         </a>
                                    </div>
                                </div>
-                                <div class="success_popup ">
+                                <div class="success_popup skills_popup">
                                     <p>you can create more skills</p>
                                 </div>
                             @endif

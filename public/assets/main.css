@@ -412,7 +412,7 @@ body{
     background: #aa19452b;
     position: absolute;
     z-index: 222;
-    top: -25%;
+    top: -23%;
     left: -21%;
     text-align: center;
     padding: 10px;
@@ -486,6 +486,9 @@ body{
     font-weight: 800;
     margin-bottom: 0px;
     padding : 0px 6px;
+}
+.skills_popup,.history_popup{
+    top: -160px;     
 }
 
 
@@ -571,11 +574,16 @@ body{
         padding: 7px 28px!important;
     }
     .success_popup{
-        width: 284px;
-        height: 284px;
+        /* width: 284px;
+        height: 284px; */
+        padding: 0px;
+        padding-left: 10px;
     }
     .success_popup .check_ic{
         padding: 10px;
+    }
+    .success_popup{
+        padding: 10px!important;
     }
 }
 @media only screen  and (max-width:1000px) {
@@ -615,7 +623,7 @@ body{
 @media only screen  and (max-width:630px) {
     .success_popup{
         width: 90%;
-        height: 208px;
+        height: auto;
     }
     .success_popup .check_ic{
         font-size: 74px;
@@ -629,6 +637,9 @@ body{
     .hd_container{
         border-top-right-radius: 60px;
     }
+    .skills_popup{
+        top: -153px;
+    }
 }
 @media only screen  and (max-width:969px) {
     .hd_wrap{
@@ -636,6 +647,10 @@ body{
     }
     .hd_top_box{
         display: block;
+    }
+    .skills_popup{
+        top: -182px;
+        left: 0;
     }
 }
 @media only screen  and (max-width:490px) {
@@ -658,19 +673,32 @@ body{
         margin: auto;
     }
     .success_popup{
+        height: auto;
+        max-width: 347px;
+        top: -204px;
+        left: -11px;
+        padding: 0px;
     }
 }
-
-
-
+@media only screen  and (max-width:451px) {
+    .history_popup{
+        top: -214px!important;
+        padding: 0px!important;
+    }
+}
+@media only screen  and (max-width:417px) {
+    .history_popup{
+        top: -242px!important;
+    }
+}
 /*--------foooter----*/
 @media only screen  and (max-width:767px) {
     .success_popup {
-        height: auto;
+        /* height: auto;
         width: auto;
         top: -204px;
-        left: -11px;
-        white-space: nowrap;
+        left: -11px; */
+        /* white-space: nowrap; */
     }
     .success_popup .check_ic{
         font-size: 16px;
@@ -682,10 +710,10 @@ body{
 }
 @media only screen  and (max-width:379px) {
     .back_btn,.nxt_btn{
-        padding: 4px 30px!important;
+        padding: 9px 30px!important;
     }
     .next_btn{
-        padding: 4px 30px!important;
+        padding: 9px 30px!important;
     }
 }
 @media only screen  and (max-width:800px) {
@@ -700,6 +728,12 @@ body{
     /* .txt_area_box{
         padding-bottom: 78px;
     } */
+}
+@media only screen  and (max-width:964px) {
+    .success_popup{
+        left: 0;
+        top: -188px;
+    }
 }
 @media only screen  and (max-width:528px) {
     .login_form{
