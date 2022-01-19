@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="">
-                   <p class="job_p">Show us the experience you got.</p>
+                   <p class="job_p">your previous or current work experience.</p>
                 </div>
                 <form method="post" action="/create-experience" class="main_form">
                     @csrf
