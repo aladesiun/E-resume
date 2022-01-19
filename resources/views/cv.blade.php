@@ -238,18 +238,18 @@
 
             }
             .work-skils{
-                display: table;
-                table-layout: fixed;
+                /*display: table;*/
+                /*table-layout: fixed;*/
 
                 width: 100%;
                 border-collapse: collapse
             }
             .work{
-                width: 65%;
+                width: 70%;
+                margin-left:30px;
                 padding: 25px 17px 25px 0;
                 height: auto;
-                display: table-cell;
-                min-height: 1000px;
+                /*display: table-cell;*/
             }
 
             .skills{
@@ -268,6 +268,18 @@
             }
             .light-txt{
                 font-weight: normal!important;
+            }
+            .edu-skills{
+                display: table;
+                width: 90%;
+                margin-left: 30px;
+            }
+            .edu{
+                width: 70%;
+                margin-left:30px;
+                padding: 25px 17px 25px 0;
+                height: auto;
+                display: table-cell;
             }
         </style>
    @if(count($resumes) == 0)
@@ -330,10 +342,14 @@
                                 </span>
                                     <div class="line"></div>
                                 </div>
+
+
                             </div>
-                    </div>
+                </div>
+            </div>
+                </div>
                 <div class="work-skils">
-                               <div class="work">
+                    <div class="work">
                                    <div class="work_det">
                                        <h6>WORK HISTORY</h6>
                                        <div class="box3"></div>
@@ -351,23 +367,9 @@
                                    </div>
                                    @endforeach
                                </div>
-
-                                    <div class="skills">
-                                        <div class="skills_det">
-                                            <h6>SKILLS</h6>
-                                            <div class="box4"></div>
-                                        </div>
-                                        <ul>
-                                            @foreach($skills as $skill)
-                                                @foreach($skill as $full_skill)
-                                                <li>{{$full_skill}}</li>
-                                                @endforeach
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                            </div>
-                <div class="row">
-                        <div>
+                </div>
+                <div class="edu-skills">
+                        <div class="edu">
                                 <div class="education_det">
                                     <h6>EDUCATION</h6>
                                     <div class="box5"></div>
@@ -379,8 +381,21 @@
                                     <div class="line"></div>
                                 </div>
                             @endforeach
-                            </div>
                         </div>
+                    <div class="skills">
+                        <div class="skills_det">
+                            <h6>SKILLS</h6>
+                            <div class="box4"></div>
+                        </div>
+                        <ul>
+                            @foreach($skills as $skill)
+                                @foreach($skill as $full_skill)
+                                    <li>{{$full_skill}}</li>
+                                @endforeach
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
             </div>
        @endforeach
    @endif
