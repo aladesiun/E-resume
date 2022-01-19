@@ -8,7 +8,7 @@
                     <h2 class="hd_txt">Signup</h2>
                 </div>
                 <div class="">
-                   <p class="job_p">Start with your most recent job and work backwards.</p>
+                   <p class="job_p">Let's get to know you.</p>
                 </div>
                 <form method="post" action="/register" class="signup_form">
                     @csrf

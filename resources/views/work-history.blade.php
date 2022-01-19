@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="">
-                   <p class="job_p">Start with your most recent job and work backwards.</p>
+                   <p class="job_p">Show us the experience you got.</p>
                 </div>
                 <form method="post" action="/create-experience" class="main_form">
                     @csrf

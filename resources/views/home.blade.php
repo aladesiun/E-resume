@@ -10,7 +10,7 @@
                </div>
              <div  class="home_details">
                  <h4 class="home_h4">Build your perfect CV</h4>
-                  <p class="home_details_txt">This app will help you generate your resume to get a job.</p>
+                  <p class="home_details_txt">This app will help you generate your CV to get a job.</p>
                   <a href="/contact"><button class="btn btn_home" >GET STARTED</button></a>
              </div>
            </div>
