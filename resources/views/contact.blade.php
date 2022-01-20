@@ -78,7 +78,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-box">
                                     <p>summary</p>
-                                    <textarea id="textarea" class="form-control" placeholder="Professional summary" name="summary">
+                                    <textarea id="textarea" class="form-control" placeholder="Professional summary | not more than 500 characters" name="summary">
 
                                 </textarea>
                                 </div>
@@ -150,7 +150,7 @@
                                     <div class="col-lg-12 col-md-12">
                                         <div class="form-box">
                                             <p>Present summary</p>
-                                            <textarea  class="form-control" placeholder="Professional summary" readonly>{{$contact->name}}</textarea>
+                                            <textarea  class="form-control" placeholder="Professional summary | not more than 500 characters" readonly>{{$contact->summary}}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -159,7 +159,7 @@
                                     <div class="col-lg-12 col-md-12">
                                         <div class="form-box">
                                             <p>New summary</p>
-                                            <textarea  class="form-control text_area" placeholder="Professional summary" name="summary" aria-placeholder="{!!$contact->summary!!}"></textarea>
+                                            <textarea  class="form-control text_area" placeholder="Professional summary | not more than 500 characters" name="summary" aria-placeholder="{!!$contact->summary!!}"></textarea>
                                         </div>
                                     </div>
                                 </div>

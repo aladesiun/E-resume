@@ -18,14 +18,14 @@ class ResumeController extends Controller
 
     public function create(Request $request){
         $this->validate($request,[
-            'email'=>'required',
-            'name'=>'required',
-            'address'=>'required',
-            'country'=>'required',
-            'city'=>'required',
-            'phone'=>'required',
-            'postal'=>'required',
-            'summary'=>'required',
+            'email'=>'required | max:100',
+            'name'=>'required | max:100',
+            'address'=>'required | max:100',
+            'country'=>'required | max:100',
+            'city'=>'required | max:100',
+            'phone'=>'required | max:100',
+            'postal'=>'required | max:100',
+            'summary'=>'required | max:1000',
         ]);
 
         $resume = new resume();
@@ -50,14 +50,14 @@ class ResumeController extends Controller
 
     public function editcontact(Request $request){
         $this->validate($request,[
-            'email'=>'required',
-            'name'=>'required',
-            'address'=>'required',
-            'country'=>'required',
-            'city'=>'required',
-            'phone'=>'required',
-            'postal'=>'required',
-            'summary'=>'required',
+            'email'=>'required | max:100',
+            'name'=>'required | max:100',
+            'address'=>'required | max:100',
+            'country'=>'required | max:100',
+            'city'=>'required | max:100',
+            'phone'=>'required | max:100',
+            'postal'=>'required | max:100',
+            'summary'=>'required | max:600',
         ]);
         $user = Auth::user()->id;
         $resume =  resume::where('user_id', $user)->first();
@@ -82,7 +82,7 @@ class ResumeController extends Controller
 
     public function createskills(Request $request ){
         $this->validate($request,[
-            'name'=>'required',
+            'name'=>'required | max:100',
 
         ]);
         $user =Auth::user()->id;
@@ -99,10 +99,10 @@ class ResumeController extends Controller
 
     public function createEducation(Request $request){
         $this->validate($request,[
-            'institution'=> 'required',
-            'qualification'=> 'required',
-            'field'=> 'required',
-            'grad_date'=> 'required',
+            'institution'=> 'required | max:100',
+            'qualification'=> 'required | max:100',
+            'field'=> 'required | max:100',
+            'grad_date'=> 'required | max:100',
         ]);
         $user =Auth::user()->id;
 
@@ -123,13 +123,12 @@ class ResumeController extends Controller
 
     public function createExperience(Request $request){
         $this->validate($request,[
-            'role_name'=>'required',
-            'company_name'=>'required',
-            'city'=>'required',
-            'country'=>'required',
+            'role_name'=>'required | max:100',
+            'company_name'=>'required | max:100',
+            'city'=>' max:100',
+            'country'=>' | max:100',
             'summary'=>'required',
-            'from'=>'required',
-            'to'=>'required',
+            'from'=>'required | max:100',
         ]);
         $user =Auth::user()->id;
 
@@ -138,6 +137,7 @@ class ResumeController extends Controller
         $experience->company_name = $request->company_name;
         $experience->role = $request->summary;
         $experience->city = $request->city;
+        $experience->link = $request->link;
         $experience->country = $request->country;
         $experience->from = $request->from;
         $experience->to = $request->to;
@@ -168,9 +168,10 @@ class ResumeController extends Controller
             $roles = explode(",",$esp->role);
             array_push($new_role, $roles);
         }
+//        return view('cv')->with(['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);
 
         // selecting PDF view
-        $pdf = PDF::loadView('resumetemp.sample1', ['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);
+        $pdf = PDF::loadView('cv', ['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);
 
         // download pdf file
         $username =Auth::user()->firstname;

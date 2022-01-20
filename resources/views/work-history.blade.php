@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="">
-                   <p class="job_p">Show us the experience you got.</p>
+                   <p class="job_p">your previous or current work experience.</p>
                 </div>
                 <form method="post" action="/create-experience" class="main_form">
                     @csrf
@@ -38,13 +38,19 @@
                             </div>
                         </div>
                         <div class="row form_row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-4 col-md-4">
                                 <div class="form-box form_b">
                                     <p>city/town</p>
                                     <input name="city" type="text" class="form-control" placeholder="e.g. Account representative"/>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-4 col-md-4">
+                                <div class="form-box">
+                                    <p>link</p>
+                                    <input name="link" type="text" class="form-control" placeholder="e.g. Account representative"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
                                 <div class="form-box">
                                     <p>country</p>
                                     <input name="country" type="text" class="form-control" placeholder="e.g. Account representative"/>
@@ -107,18 +113,25 @@
                                     </div>
                                 </div>
                                 <div class="row form_row">
-                                    <div class="col-lg-6 col-md-6">
+                                    <div class="col-lg-4 col-md-4">
                                         <div class="form-box form_b">
                                             <p>city/town</p>
                                             <input name="city" type="text" class="form-control" placeholder="e.g. Account representative"/>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6">
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="form-box">
+                                            <p>link</p>
+                                            <input name="link" type="text" class="form-control" placeholder="e.g. Account representative"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
                                         <div class="form-box">
                                             <p>country</p>
                                             <input name="country" type="text" class="form-control" placeholder="e.g. Account representative"/>
                                         </div>
                                     </div>
+
                                 </div>
                                 <div class="row form_row">
                                     <div class="col-lg-6 col-md-6">

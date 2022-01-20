@@ -9,11 +9,11 @@
                     <div class="tp_box">
                         <div class="icon_wrap">
                             <i class="far fa-eye"></i>
-                            <p><a href="/resume" class="eb_link">Preview</a></p>
+                            <p><a href="/resume" class="eb_link" target="_blank">Preview</a></p>
                         </div>
                         <div class="icon_wrap">
                             <i class="fas fa-download"></i>
-                            <p><a href="" class="eb_link">Download</a></p>
+                            <p><a href="/getresume" class="eb_link">Download</a></p>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                     <div class="row form_row txt_area_row">
                         <div class="col-lg-12">
                            <div class="form-box">
-                               <textarea  name="name" class="form-control txt_area" id="textarea" placeholder="saparate the skills with a comma ','">
+                               <textarea  name="name" class="form-control txt_area" placeholder="saparate the skills with a comma ','">
 
                                </textarea>
                            </div>
@@ -44,9 +44,7 @@
                                 <div class="row form_row txt_area_row">
                                     <div class="col-lg-12">
                                         <div class="form-box">
-                               <textarea  name="name" class="form-control txt_area" id="textarea" placeholder="saparate the skills with a comma ','">
-
-                               </textarea>
+                               <textarea  name="name" class="form-control txt_area"  placeholder="saparate the skills with a comma ','"></textarea>
                                         </div>
                                     </div>
                                 </div>

@@ -32,7 +32,7 @@ class HTMLPDFController extends Controller
         }
 
         // selecting PDF view
-        $pdf = PDF::loadView('resumetemp.sample1', ['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);
+        $pdf = PDF::loadView('cv', ['resumes'=>$resume, 'skills'=>$new_skill, 'roles'=>$new_role, 'experiences'=>$experience, 'educations'=>$education]);
 
         // download pdf file
         $username =Auth::user()->firstname;

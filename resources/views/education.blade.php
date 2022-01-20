@@ -7,7 +7,7 @@
     <div class="hd_container">
                 <div class="hd_wrap">
                     <div class="hd_top_box">
-                        <h2 class="hd_txt">Just my education</h2>
+                        <h2 class="hd_txt">Education</h2>
                         <div class="tp_box">
                             <div class="icon_wrap">
                                 <i class="far fa-eye"></i>
@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="">
-                        <p class="job_p">Education Bio.</p>
+                        <p class="job_p">present educational background or certificate.</p>
                     </div>
                     <form method="post" action="create-education">
                         @csrf

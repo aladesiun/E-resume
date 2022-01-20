@@ -81,7 +81,14 @@
                 outline: 0;
                 vertical-align: baseline;
                 background: transparent;
-                letter-spacing: -1!important;
+                font-weight: normal!important;
+                text-transform: capitalize;
+            }
+            .txt-bold{
+                font-weight: bold!important;
+            }
+            .field_fname{
+                font-weight: bold!important;
             }
             #document{
                 background: white;
@@ -420,6 +427,9 @@
         </style>
     </div>
 
+    @if(count($resumes) == 0)
+        <h1>create resume first</h1>
+    @else
         @foreach($resumes as $res)
             <div id="document" class="document fontsize fontface vmargins hmargins pagesize skn-mli2 MLI2 MUK" docskinwidth="525">
                 <div id="CONTAINER_PARENT_0" class="topsection">
@@ -454,14 +464,14 @@
                             <div id="SECTION_SUMM71fb9a74-5f87-41fd-9a5b-dfbaf1769e69" class="section SECTION_SUMM" data-section-cd="SUMM">
                                 <div class="doc-item">
                                     <div class="heading">
-                                        <div class="sectiontitle" id="SECTIONNAME_SUMM">Professional summary<span class="rename-section text-rename"> Rename</span></div>
+                                        <div class="sectiontitle" id="SECTIONNAME_SUMM">Professional summary</div>
                                     </div>
                                     <div class="">
                                         <div class="">
                                             <div id="PARAGRAPH_SUMM_e41e59a4-5ca8-bd2b-2df9-6108d4d7436c" class="paragraph PARAGRAPH_SUMM firstparagraph">
                                                 <div class="clearfix doc-item">
                                                     <div class="field singlecolumn" id="FIELD_FRFM">
-                                                        <p>{!!$res->summary!!}</p>
+                                                        <p>{{$res->summary}}</p>
                                                     </div>
                                                 </div>
                                                 <div class="doc-overlay para-overlay" style="left: -37px; right: -37px;"><span class="badge badge-primary badge-edit"></span><span>&nbsp;</span></div>
@@ -480,7 +490,7 @@
                                 <div id="SECTION_EXPRf69ce02b-0412-47d6-a189-1f8f3b0d5ba2" class="section experience SECTION_EXPR multi-para" data-section-cd="EXPR">
                                     <div class="doc-item">
                                         <div class="heading">
-                                            <div class="sectiontitle" id="SECTIONNAME_EXPR">Work history<span class="rename-section text-rename"> Rename</span></div>
+                                            <div class="sectiontitle" id="SECTIONNAME_EXPR">Work history</div>
                                         </div>
                                         <div class="">
                                             <div class="sortableInner">
@@ -505,7 +515,7 @@
 
                                                                     <span class="jobline" id="FIELD_JDES">
                                                         <ul>
-                                                            <span>{!!$experience->role!!}</span>
+                                                            <lspan><p></p>{!!$experience->role!!}</lspan></li>
 
                                                         </ul>
                                                     </span>
@@ -530,7 +540,7 @@
                                 <div id="SECTION_EDUCd1897f1c-c660-4b1b-a1cd-7714496de3a3" class="section education SECTION_EDUC multi-para" data-section-cd="EDUC">
                                     <div class="doc-item">
                                         <div class="heading">
-                                            <div class="sectiontitle" id="SECTIONNAME_EDUC">Education<span class="rename-section text-rename"> Rename</span></div>
+                                            <div class="sectiontitle" id="SECTIONNAME_EDUC">Education</div>
                                         </div>
                                         <div class="">
                                             @foreach($educations as $education)
@@ -546,7 +556,7 @@
                                                                 <div class="paddedline" dependency="SCIT|SSTA|SCHO|SCNT">
                                                                     <span class="companyname" id="FIELD_SCHO"> {{$education->institution}}</span>
                                                                     <span dependency="SCHO"><span dependency="SCIT|SSTA|SCNT">  </span></span>
-                                                                    <span class="joblocation jobcity" id="FIELD_SCIT"> {{$education->city}} - {{$education->country}}</span>
+                                                                    <span class="joblocation jobcity" id="FIELD_SCIT"> {{$education->city}} </span>
                                                                     <span class="joblocation jobstate" id="FIELD_SSTA"></span>
                                                                     <span class="joblocation jobcountry" id="FIELD_SCNT"></span>
                                                                 </div>
@@ -571,7 +581,7 @@
                             <div id="SECTION_CNTC285309fc-c9f6-402d-b7f9-a342f4f17d03" class="section SECTION_CNTC notdraggable cntc-sec" data-section-cd="CNTC">
                                 <div class="doc-item">
                                     <div class="heading">
-                                        <div class="sectiontitle" id="SECTIONNAME_CNTC">Contact<span class="rename-section text-rename"> Rename</span></div>
+                                        <div class="sectiontitle" id="SECTIONNAME_CNTC">Contact</div>
                                     </div>
                                     <div class="">
                                         <div class="">
@@ -581,10 +591,15 @@
 
                                                 <span class="paddedline adrsDetails zipsuffix" dependency="ADDR|STRT|CITY|STAT|ZIPC">
                                                     <span class="txt-bold"><span class="xslt_static_change">Address</span><span class="beforecolonspace"> </span><span>: </span></span>
-                                                    <span class="field" id="FIELD_STRT">{{$res->address}}</span><span dependency="STRT+CITY|STAT">, </span> <span class="field" id="FIELD_CITY">{{$res->city}}</span><span dependency="CITY+STAT">, </span>
+                                                    <span class="field" id="FIELD_STRT">{{$res->address}}</span><span dependency="STRT+CITY|STAT">,
+                                                    </span> <span class="field" id="FIELD_CITY">{{$res->city}}</span>
+                                                    <span dependency="CITY+STAT">, </span>
                                                     <span class="field" id="FIELD_STAT">{{$res->country}}</span>
-                                                    <span class="field" id="FIELD_ZIPC">{{$res->postal}}</span>
                                                     <span class="field" id="FIELD_ADDR"></span>
+                                                </span>
+
+                                                        <span class="paddedline" dependency="HPHN|CPHN">
+                                                            <span class="txt-bold"><span class="xslt_static_change">Postal: </span></span><span class="beforecolonspace">: </span><span class="field" id="FIELD_HPHN">{{$res->postal}}</span>
                                                 </span>
                                                         <span class="paddedline" dependency="HPHN|CPHN">
                                                     <span class="txt-bold"><span class="xslt_static_change">Phone</span><span class="beforecolonspace"> </span><span>: </span></span><span class="field" id="FIELD_HPHN">{{$res->phone}}</span>
@@ -610,7 +625,7 @@
                             <div id="SECTION_HILT8892011c-b22a-4fa8-bd6e-0c990a804fc9" class="section SECTION_HILT" data-section-cd="HILT">
                                 <div class="doc-item">
                                     <div class="heading">
-                                        <div class="sectiontitle" id="SECTIONNAME_HILT">Skills<span class="rename-section text-rename"> Rename</span></div>
+                                        <div class="sectiontitle" id="SECTIONNAME_HILT">Skills</div>
                                     </div>
                                     <div class="">
                                         <div class="">
@@ -623,7 +638,7 @@
 
                                                             @foreach($skill as $fullskill)
 
-                                                                <li>{!!$fullskill!!}</li>
+                                                                <li><span>{!! $fullskill!!}</span></li>
                                                             @endforeach
                                                         @endforeach
 
@@ -645,6 +660,8 @@
                 <div id="CONTAINER_PARENT_2" class="bottom-box"><div id="CONTAINER_3"></div></div>
             </div>
         @endforeach
+
+    @endif
 
 </div>
 </body>

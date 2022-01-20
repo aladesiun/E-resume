@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Experience;
+use App\Models\experience;
 use App\Models\Education;
 use App\Models\resume;
 use App\Models\skill;
