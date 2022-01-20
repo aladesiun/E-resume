@@ -37,14 +37,6 @@
                       <button  class="btn nxt_btn sub_btn" type="submit">
                         Submit
                       </button>
-                      <div>
-                           <a class="btn back_btn" href="/contact">
-                              Back
-                            </a>
-                            <a class="btn next_btn" href="/work-history">
-                              Next
-                            </a>
-                      </div>
                     </div>
                     @else
                             @if(count($skill)>=1)
@@ -62,14 +54,6 @@
                                     <button  class="btn nxt_btn sub_btn" type="submit">
                                         Submit
                                     </button>
-                                    <div>
-                                        <a class="btn back_btn" href="/contact">
-                                            Back
-                                       </a>
-                                       <a class="btn next_btn" href="/work-history">
-                                         Next
-                                        </a>
-                                   </div>
                                </div>
                                 <div class="success_popup skills_popup">
                                     <p>you can create more skills</p>

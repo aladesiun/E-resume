@@ -8,7 +8,7 @@
                     <h2 class="hd_txt">Login</h2>
                 </div>
                 <div class="">
-                   <p class="job_p">Start with your most recent job and work backwards.</p>
+                   <p class="job_p"></p>
                 </div>
                 <form method="post" action="/login" class="login_form">
                     @csrf
