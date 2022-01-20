@@ -81,9 +81,6 @@
                                 Submit
                             </button>
                             <div>
-                                <a class="btn back_btn" href="/skills">
-                                   Back
-                                </a>
                                 <a class="btn next_btn" href="/education">
                                     Next
                                 </a>
@@ -152,9 +149,6 @@
                                         Submit
                                     </button>
                                     <div>
-                                        <a class="btn back_btn" href="/skills">
-                                            Back
-                                        </a>
                                         <a class="btn next_btn" href="/education">
                                           Next
                                         </a>

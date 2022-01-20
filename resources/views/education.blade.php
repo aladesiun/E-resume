@@ -75,6 +75,11 @@
                         <button type="submit" class="btn nxt_btn">
                            Submit
                         </button>
+                        <div>
+                            <a class="btn back_btn" href="/work-history">
+                              Back
+                            </a>
+                        </div>
                     </div>
                         @else
                             <div class="success_popup">
@@ -130,6 +135,11 @@
                                 <button type="submit" class="btn nxt_btn">
                                     Submit
                                 </button>
+                                <div>
+                                    <a class="btn back_btn" href="/work-history">
+                                    Back
+                                    </a>
+                               </div>
                             </div>
                             @endif
                         @endif
