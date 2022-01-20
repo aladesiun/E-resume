@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="">
-                        <p class="job_p">Use our expert recommendations below to get started.</p>
+                        <p class="job_p">Education Bio.</p>
                     </div>
                     <form method="post" action="create-education">
                         @csrf
