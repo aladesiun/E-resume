@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Experience;
+use App\Models\experience;
 use App\Models\Education;
 use App\Models\resume;
 use App\Models\skill;
@@ -34,7 +34,8 @@ class ResumeController extends Controller
         $resume->address = $request->address;
         $resume->country = $request->country;
         $resume->city = $request->city;
-        $resume->phone = $request->postal;
+        $resume->phone = $request->phone;
+        $resume->postal = $request->postal;
         $resume->summary= $request->summary;
         $resume->experience_id= $request->experience_id;
         $resume->user_id= Auth::user()->id;
@@ -50,14 +51,14 @@ class ResumeController extends Controller
 
     public function editcontact(Request $request){
         $this->validate($request,[
-            'email'=>'required | max:100',
-            'name'=>'required | max:100',
-            'address'=>'required | max:100',
-            'country'=>'required | max:100',
-            'city'=>'required | max:100',
-            'phone'=>'required | max:100',
-            'postal'=>'required | max:100',
-            'summary'=>'required | max:600',
+            'email'=>' max:1100',
+            'name'=>' max:1100',
+            'address'=>' max:1100',
+            'country'=>' max:1100',
+            'city'=>' max:1100',
+            'phone'=>' max:1100',
+            'postal'=>' max:1100',
+            'summary'=>' max:1600',
         ]);
         $user = Auth::user()->id;
         $resume =  resume::where('user_id', $user)->first();
@@ -66,7 +67,8 @@ class ResumeController extends Controller
         $resume->address = $request->address;
         $resume->country = $request->country;
         $resume->city = $request->city;
-        $resume->phone = $request->postal;
+        $resume->phone = $request->phone;
+        $resume->postal = $request->postal;
         $resume->summary= $request->summary;
         $resume->experience_id= $request->experience_id;
         $resume->user_id= Auth::user()->id;

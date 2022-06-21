@@ -6,3 +6,4 @@ $(document).ready(function(){
     $(".success_popup").show().delay(5000).fadeOut();
     $(".alert").delay(2500).fadeOut();
 });
+  
