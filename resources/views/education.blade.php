@@ -30,7 +30,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-box form_b" >
                                     <p>institution name</p>
-                                    <input name="" type="text" class="form-control" placeholder="Institution name"/>
+                                    <input name="institution" type="text" class="form-control" placeholder="Institution name"/>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
@@ -45,7 +45,7 @@
                             <div class="col-lg-4 col-md-4">
                                 <div class="form-box form_b">
                                     <p>city/town</p>
-                                    <input name="institution" type="text" class="form-control" placeholder=" city"/>
+                                    <input name="city" type="text" class="form-control" placeholder=" city"/>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4">
@@ -90,7 +90,7 @@
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-box form_b" >
                                         <p>institution name</p>
-                                        <input name="" type="text" class="form-control" placeholder="Institution name"/>
+                                        <input name="institution" type="text" class="form-control" placeholder="Institution name"/>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
@@ -105,7 +105,7 @@
                                 <div class="col-lg-4 col-md-4">
                                     <div class="form-box form_b">
                                         <p>city/town</p>
-                                        <input name="institution" type="text" class="form-control" placeholder=" city"/>
+                                        <input name="city" type="text" class="form-control" placeholder=" city"/>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4">

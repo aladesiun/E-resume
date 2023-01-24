@@ -18,11 +18,7 @@ class UsersController extends Controller
             'confirm_password'=>'required|min:5'
         ]);
         if( !$this->validate($request,[
-            'firstname'=>'required|max:100',
-            'lastname'=>'required|max:100',
-            'email'=>'required|unique:resumes',
-            'password'=>'required|min:5',
-            'confirm_password'=>'required|min:5'
+            'email'=>'required|unique:users',
         ])){
             HelperController::flashSession(false, 'email already taken' );
 

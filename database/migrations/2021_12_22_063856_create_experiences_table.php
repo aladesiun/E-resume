@@ -18,6 +18,7 @@ class CreateExperiencesTable extends Migration
             $table->string('user_id')->nullable();
             $table->string('role_name');
             $table->string('company_name');
+            $table->string('link');
             $table->string('city');
             $table->string('country');
             $table->date('from');
